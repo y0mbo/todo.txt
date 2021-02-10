@@ -17,7 +17,7 @@ This is the documentation for y0mbo's todo.txt.
 
 - User Personas
   - [Todo.txt-Persona-John-Uhri](https://www.figma.com/file/7SbPTGll19ZyFVb9zW5KGJ/Todo.txt-Persona-John-Uhri?node-id=0%3A1)
-- User Scenarios
+- [User Scenarios](userScenarios.md)
 - User Testing
 - User Experience Map
 
