@@ -31,7 +31,7 @@ This is the documentation for y0mbo's todo.txt.
 ## Test
 
 - Usability Tests
-- Review Metrcics
+- Review Metrics
 - Track Usage
 - Inform Next Iteration
 
