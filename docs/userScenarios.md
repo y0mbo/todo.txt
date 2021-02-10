@@ -1,18 +1,14 @@
 # User Scenarios
 
-## Template
+# Template
 
-### Title: <What this user story is about>
-
----
+## Title: <What this user story is about>
 
 ```
 When      [event]
 I want to [motivation]
 So I can  [outcome]
 ```
-
----
 
 ### Scenario A: <What should happen>
 
@@ -22,11 +18,8 @@ Given <some context>,
  Then <such outcomes are expected to occur>.
 ```
 
----
-
-## Notes
+### Notes
 
 Priority: <Highest, High, Medium, Low, Lowest, Unprioritized>
 
 Story Points: <1, 3, 5, 8, 13, 21, ... >
-—
