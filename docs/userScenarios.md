@@ -3,17 +3,34 @@
 ## Title: Starting to use the app
 
 ```
-When      I open the app
+When I open the app
 I want to see my tasks
-So I can  update my tasks
+So I can update my tasks
 ```
 
-### Scenario A: I have no tasks in the app
+### Scenario: I have no tasks in the app
 
 ```
 Given I have no open tasks,
  When I open the app,
  Then I should see a message that says I have no tasks.
+```
+
+### Scenario: I have at least one task
+
+```
+Given I have at least one open task,
+ When I open the app,
+ Then I should see the list of tasks.
+```
+
+### Scenario: I have at least one task and have set a filter
+
+```
+Given I have open tasks
+  And I set up a filter the last time I used the app
+ When I open the app,
+ Then I should only see the tasks that meet the filter criteria.
 ```
 
 ### Notes
