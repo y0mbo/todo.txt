@@ -6,7 +6,7 @@ There are many possibilities for the structure of a todo list's data. The simple
 
 ## Decision
 
-Todo.txt at [http://todotxt.org/](http://todotxt.org/) provides a simple, text format usable on any device and well supported by a number of applications. This implementation will conform to the Todo.txt format.
+Todo.txt at [http://todotxt.org/](http://todotxt.org/) provides a simple, text format usable on any device and well supported by a number of applications. This implementation will conform to the Todo.txt format. The format can be found here: [todotxt/todo.txt](https://github.com/todotxt/todo.txt/blob/master/README.md)
 
 ## Status
 
