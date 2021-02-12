@@ -41,5 +41,5 @@ This is the documentation for y0mbo's todo.txt.
 
 ## Architectural Decisions
 
-- [0 - Use React](adr/000-UseReact.md)
-- [1 - Use the todo.txt file format](adr/001-UseTodoTxtFormat.md)
+- [000 - Use React](adr/000-UseReact.md)
+- [001 - Use the todo.txt file format](adr/001-UseTodoTxtFormat.md)
