@@ -1,36 +1,37 @@
 # User Scenarios
 
-## Title: Starting to use the app
+## Title: Creating a task list
 
 ```
-When I open the app
-I want to see my tasks
-So I can update my tasks
+When I have something I need to do,
+I want to create a task,
+So I can remember to do it.
 ```
 
-### Scenario: I have no tasks in the app
+---
+
+## Title: Viewing a task list
 
 ```
-Given I have no open tasks,
- When I open the app,
+When I open the application,
+I want to see my task list,
+So I can work on the things I need to do.
+```
+
+### Scenario: I have not created any tasks
+
+```
+Given I have not created any tasks,
+ When I view my task list,
  Then I should see a message that says I have no tasks.
 ```
 
-### Scenario: I have at least one task
+### Scenario: I have open tasks
 
 ```
-Given I have at least one open task,
- When I open the app,
- Then I should see the list of tasks.
-```
-
-### Scenario: I have at least one task and have set a filter
-
-```
-Given I have open tasks
-  And I set up a filter the last time I used the app
- When I open the app,
- Then I should only see the tasks that meet the filter criteria.
+Given I have created at least one task,
+ When I view my task list,
+ Then I should see my tasks.
 ```
 
 ---
