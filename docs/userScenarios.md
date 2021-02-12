@@ -33,11 +33,33 @@ Given I have open tasks
  Then I should only see the tasks that meet the filter criteria.
 ```
 
-### Notes
+---
 
-Priority: <Highest, High, Medium, Low, Lowest, Unprioritized>
+## Title: Creating tasks with priorities
 
-Story Points: <1, 3, 5, 8, 13, 21, ... >
+```
+When I create or edit a task,
+I want to follow the todo.txt format
+So I can something something
+```
+
+### Scenario: If a priority exists, it _always_ appears first
+
+```
+Given an open task,
+ When the user adds a priority,
+ Then the priority appears first in the task text.
+```
+
+### Scenario: If a priority exists, it is in the (A) format, followed by a space.
+
+```
+Given an open task,
+ When the user adds a priority,
+ Then the priority must be formatted as a single capital letter
+  And the priority must have parenthesis around it
+  And the priority must be followed by a space.
+```
 
 ---
 
