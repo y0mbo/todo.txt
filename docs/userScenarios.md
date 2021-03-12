@@ -36,6 +36,16 @@ Given I have created at least one task,
 
 ---
 
+## Creating a task
+
+```
+When
+I want to
+So I can
+```
+
+---
+
 ## Title: Creating tasks with priorities
 
 ```
@@ -72,9 +82,9 @@ Given an open task,
 When      [event]
 I want to [motivation]
 So I can  [outcome]
-```
+``` 
 
-### Scenario A: <What should happen>
+### Scenario: <What should happen>
 
 ```
 Given <some context>,
