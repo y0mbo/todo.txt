@@ -1,5 +1,6 @@
 import React from "react";
 import Tasks from "./Tasks";
+import sampleTasks from "../sampleTasks";
 
 class App extends React.Component {
   state = {
@@ -8,12 +9,16 @@ class App extends React.Component {
     projects: {},
   };
 
+  loadSampleTasks = () => {
+    this.setState({ tasks: sampleTasks });
+  };
+
   render() {
     return (
       <React.Fragment>
         <h1>Hello, World!</h1>
         <p>This is John's todo.txt implementation</p>
-        <Tasks tasks={this.state.tasks}></Tasks>
+        <Tasks loadSampleTasks={this.loadSampleTasks}></Tasks>
       </React.Fragment>
     );
   }
