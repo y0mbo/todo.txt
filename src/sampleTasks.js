@@ -14,6 +14,7 @@ const tasks = {
     raw: "(B) 2021-03-12 Another task with a +project",
   },
   task3: {
+    priority: "A",
     createDate: "2021-03-12",
     description: "A task with @context",
     raw: "2021-03-12 A task with @context",
