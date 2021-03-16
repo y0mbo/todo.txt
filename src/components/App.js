@@ -1,5 +1,6 @@
 import React from "react";
 import Tasks from "./Tasks";
+import Task from "./Task";
 import sampleTasks from "../sampleTasks";
 
 class App extends React.Component {
@@ -10,16 +11,30 @@ class App extends React.Component {
   };
 
   loadSampleTasks = () => {
+    console.log("loadSampleTasks called");
     this.setState({ tasks: sampleTasks });
+  };
+  loadProjects = () => {
+    const projects = { project1: {} };
+    this.setState({ projects });
   };
 
   render() {
+    this.loadProjects;
     return (
-      <React.Fragment>
+      <div className="app">
         <h1>Hello, World!</h1>
-        <p>This is John's todo.txt implementation</p>
-        <Tasks loadSampleTasks={this.loadSampleTasks}></Tasks>
-      </React.Fragment>
+        <ul>
+          {/* loop through state.tasks' keys and map that. */}
+          {Object.keys(this.state.tasks).map((key) => (
+            <Task key={key} id={key} details={this.state.fishes[key]} />
+          ))}
+        </ul>
+        <Tasks
+          loadSampleTasks={this.loadSampleTasks}
+          tasks={this.state.tasks}
+        />
+      </div>
     );
   }
 }
