@@ -2,6 +2,7 @@ import React from "react";
 import Tasks from "./Tasks";
 import Task from "./Task";
 import sampleTasks from "../sampleTasks";
+import styled from "styled-components";
 
 class App extends React.Component {
   state = {
