@@ -2,7 +2,6 @@ import React from "react";
 import Tasks from "./Tasks";
 import Task from "./Task";
 import sampleTasks from "../sampleTasks";
-import styled from "styled-components";
 
 class App extends React.Component {
   state = {
@@ -16,7 +15,11 @@ class App extends React.Component {
   };
 
   loadProjects = () => {
-    const projects = { project1: {} };
+    const tasks = { ...this.state.tasks };
+    const projects = { ...this.state.projects };
+
+    projects[`p${Date.now()}`] = "projectName";
+
     this.setState({ projects });
   };
 
@@ -28,6 +31,7 @@ class App extends React.Component {
         <Tasks
           loadSampleTasks={this.loadSampleTasks}
           tasks={this.state.tasks}
+          loadProjects={this.loadProjects}
         />
       </div>
     );
