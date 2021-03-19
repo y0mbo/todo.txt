@@ -1,10 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const TaskStyle = styled.li`
+const TaskStyle = styled.div`
   color: #333;
   font-size: 1em;
   font-family: arial;
+  margin-bottom: 10px;
+`;
+const Priority = styled.span`
+  color: #ff3300;
+  padding-right: 10px;
+`;
+const CreateDate = styled.span`
+  color: #009900;
+  padding-right: 10px;
+`;
+const Raw = styled.div`
+  font-size: 0.8rem;
+  color: #999;
 `;
 
 class Task extends React.Component {
@@ -13,9 +26,10 @@ class Task extends React.Component {
 
     return (
       <TaskStyle>
-        <span className="priority">({priority})</span>&nbsp;
+        {priority && <Priority>{priority}</Priority>}
+        {createDate && <CreateDate>{createDate}</CreateDate>}
         {description}
-        <div className="raw">{raw}</div>
+        <Raw>{raw}</Raw>
       </TaskStyle>
     );
   }
