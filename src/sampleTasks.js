@@ -10,6 +10,7 @@ const sampleTasks = {
   task2: {
     priority: "B",
     createDate: "2021-03-12",
+    projects: "+project",
     description: "Another task with a +project",
     raw: "(B) 2021-03-12 Another task with a +project",
   },
