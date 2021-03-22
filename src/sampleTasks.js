@@ -4,8 +4,9 @@ const sampleTasks = {
   task1: {
     priority: "A",
     createDate: "2021-03-12",
+    projects: "+banana",
     description: "Create sample data.",
-    raw: "(A) 2021-03-12 Create sample data.",
+    raw: "(A) 2021-03-12 Create sample data. +banana  ",
   },
   task2: {
     priority: "B",
