@@ -26,7 +26,7 @@ class Task extends React.Component {
 
     return (
       <TaskStyle>
-        {priority && <Priority>{priority}</Priority>}
+        {priority && <Priority>({priority})</Priority>}
         {createDate && <CreateDate>{createDate}</CreateDate>}
         {description}
         <Raw>{raw}</Raw>
