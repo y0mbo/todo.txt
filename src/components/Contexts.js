@@ -1,13 +1,13 @@
 import React from "react";
 
-class Projects extends React.Component {
+class Contexts extends React.Component {
   render() {
     return (
       <div>
         <ul>
-          {Object.keys(this.props.projects).map((key) => (
+          {Object.keys(this.props.contexts).map((key) => (
             <li key={key}>
-              {key} {this.props.projects[key]}
+              {key} {this.props.contexts[key]}
             </li>
           ))}
         </ul>
@@ -16,4 +16,4 @@ class Projects extends React.Component {
   }
 }
 
-export default Projects;
+export default Contexts;

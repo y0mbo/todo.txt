@@ -1,6 +1,7 @@
 import React from "react";
-import Tasks from "./Tasks";
+import Contexts from "./Contexts";
 import Projects from "./Projects";
+import Tasks from "./Tasks";
 import sampleTasks from "../sampleTasks";
 
 class App extends React.Component {
@@ -13,6 +14,32 @@ class App extends React.Component {
 
   loadSampleTasks = () => {
     this.setState({ tasks: sampleTasks });
+  };
+
+  loadContexts = () => {
+    const tasks = { ...this.state.tasks };
+    const contexts = { ...this.state.contexts };
+
+    // get all the unique projects from the task list
+    let taskContexts = Object.values(tasks)
+      .map((task) => task.contexts)
+      .filter((x) => x !== undefined)
+      .sort();
+
+    // count the number of tasks with each project name
+    let contextCounts = {};
+    for (var i = 0; i < taskContexts.length; i++) {
+      contextCounts[taskContexts[i]] =
+        1 + (contextCounts[taskContexts[i]] || 0);
+    }
+
+    // add the project and count to the projects
+    Object.keys(contextCounts).forEach((key) => {
+      contexts[key] = contextCounts[key];
+    });
+
+    this.setState({ contexts });
+    console.log(contexts);
   };
 
   loadProjects = () => {
@@ -44,11 +71,12 @@ class App extends React.Component {
     return (
       <div className="app">
         <Projects projects={this.state.projects} />
-
+        <Contexts contexts={this.state.contexts} />
         <Tasks
           loadSampleTasks={this.loadSampleTasks}
           tasks={this.state.tasks}
           loadProjects={this.loadProjects}
+          loadContexts={this.loadContexts}
         />
       </div>
     );

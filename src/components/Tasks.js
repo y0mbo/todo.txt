@@ -8,6 +8,7 @@ class Tasks extends React.Component {
         <h2>My todo list</h2>
         <button onClick={this.props.loadSampleTasks}>Load sample tasks</button>
         <button onClick={this.props.loadProjects}>Load projects</button>
+        <button onClick={this.props.loadContexts}>Load contexts</button>
         <ul className="tasks">
           {/* loop through state.tasks' keys and map that. */}
           {Object.keys(this.props.tasks).map((key) => (

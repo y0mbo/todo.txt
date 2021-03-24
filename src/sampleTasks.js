@@ -16,13 +16,13 @@ const sampleTasks = {
     raw: "(B) 2021-03-12 Another task with a +project",
   },
   task3: {
-    context: "@context",
+    contexts: "@context",
     createDate: "2021-03-12",
     description: "Task with @context",
     raw: "2021-03-12 Task with @context",
   },
   task4: {
-    context: "@context",
+    contexts: "@context",
     createDate: "2021-03-12",
     projects: "+banana",
     description: "Task with @context +banana",
