@@ -20,26 +20,25 @@ class App extends React.Component {
     const tasks = { ...this.state.tasks };
     const contexts = { ...this.state.contexts };
 
-    // get all the unique projects from the task list
+    // get all the unique contexts from the task list
     let taskContexts = Object.values(tasks)
       .map((task) => task.contexts)
       .filter((x) => x !== undefined)
       .sort();
 
-    // count the number of tasks with each project name
+    // count the number of tasks with each context name
     let contextCounts = {};
     for (var i = 0; i < taskContexts.length; i++) {
       contextCounts[taskContexts[i]] =
         1 + (contextCounts[taskContexts[i]] || 0);
     }
 
-    // add the project and count to the projects
+    // add the contexts and count to the contexts
     Object.keys(contextCounts).forEach((key) => {
       contexts[key] = contextCounts[key];
     });
 
     this.setState({ contexts });
-    console.log(contexts);
   };
 
   loadProjects = () => {
