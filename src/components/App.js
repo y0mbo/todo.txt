@@ -5,9 +5,10 @@ import sampleTasks from "../sampleTasks";
 
 class App extends React.Component {
   state = {
-    tasks: {},
+    contexts: {},
     priorities: {},
     projects: {},
+    tasks: {},
   };
 
   loadSampleTasks = () => {
@@ -18,28 +19,30 @@ class App extends React.Component {
     const tasks = { ...this.state.tasks };
     const projects = { ...this.state.projects };
 
-    // get all the projects from the tasks
-    const taskArray = Object.values(tasks);
-    var filtered = [...new Set(taskArray.map((task) => task.projects))].filter(
-      (x) => x !== undefined
-    );
+    // get all the unique projects from the task list
+    let taskProjects = Object.values(tasks)
+      .map((task) => task.projects)
+      .filter((x) => x !== undefined)
+      .sort();
 
-    console.log(filtered);
+    // count the number of tasks with each project name
+    let projectCounts = {};
+    for (var i = 0; i < taskProjects.length; i++) {
+      projectCounts[taskProjects[i]] =
+        1 + (projectCounts[taskProjects[i]] || 0);
+    }
 
-    //    projects = projects.concat(filtered);
+    // add the project and count to the projects
+    Object.keys(projectCounts).forEach((key) => {
+      projects[key] = projectCounts[key];
+    });
 
-    projects[`p${Date.now()}`] = "projectName";
-
-    console.log(projects);
-
-    // write the projects to state
     this.setState({ projects });
   };
 
   render() {
     return (
       <div className="app">
-        <h1>Hello, World!</h1>
         <Projects projects={this.state.projects} />
 
         <Tasks

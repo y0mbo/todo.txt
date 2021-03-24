@@ -7,7 +7,9 @@ class Projects extends React.Component {
         <ul>
           {/* loop through state.tasks' keys and map that. */}
           {Object.keys(this.props.projects).map((key) => (
-            <li key={key}>{this.props.projects[key]}</li>
+            <li key={key}>
+              {key} {this.props.projects[key]}
+            </li>
           ))}
         </ul>
       </div>

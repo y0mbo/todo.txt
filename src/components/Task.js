@@ -8,7 +8,7 @@ const TaskStyle = styled.div`
   margin-bottom: 10px;
 `;
 const Priority = styled.span`
-  color: #ff3300;
+  color: #0033ff;
   padding-right: 10px;
 `;
 const CreateDate = styled.span`
