@@ -66,6 +66,31 @@ class App extends React.Component {
     this.setState({ projects });
   };
 
+  loadPriorities = () => {
+    const tasks = { ...this.state.tasks };
+    const priorities = { ...this.state.priorities };
+
+    // get all the unique priorities from the task list
+    let taskPriorities = Object.values(tasks)
+      .map((task) => task.priorities)
+      .filter((x) => x !== undefined)
+      .sort();
+
+    // count the number of tasks with each priority
+    let priorityCounts = {};
+    for (var i = 0; i < taskPriorities.length; i++) {
+      priorityCounts[taskPriorities[i]] =
+        1 + (priorityCounts[taskPriorities[i]] || 0);
+    }
+
+    // add the project and count to the priorities
+    Object.keys(priorityCounts).forEach((key) => {
+      priorities[key] = priorityCounts[key];
+    });
+
+    this.setState({ priorities });
+  };
+
   render() {
     return (
       <div className="app">
