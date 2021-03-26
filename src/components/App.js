@@ -17,7 +17,7 @@ class App extends React.Component {
   };
 
   loadContexts = () => {
-    const tasks = { ...this.state.tasks };
+    const tasks = sampleTasks; //{ ...this.state.tasks };
     const contexts = { ...this.state.contexts };
 
     // get all the unique contexts from the task list
@@ -42,7 +42,7 @@ class App extends React.Component {
   };
 
   loadProjects = () => {
-    const tasks = { ...this.state.tasks };
+    const tasks = sampleTasks; //{ ...this.state.tasks };
     const projects = { ...this.state.projects };
 
     // get all the unique projects from the task list
@@ -67,7 +67,7 @@ class App extends React.Component {
   };
 
   loadPriorities = () => {
-    const tasks = { ...this.state.tasks };
+    const tasks = sampleTasks; //{ ...this.state.tasks };
     const priorities = { ...this.state.priorities };
 
     // get all the unique priorities from the task list
@@ -92,6 +92,7 @@ class App extends React.Component {
   };
 
   loadSite = () => {
+    this.loadSampleTasks();
     this.loadProjects();
     this.loadContexts();
     this.loadPriorities();
