@@ -91,17 +91,20 @@ class App extends React.Component {
     this.setState({ priorities });
   };
 
+  loadSite = () => {
+    this.loadProjects();
+    this.loadContexts();
+    this.loadPriorities();
+  };
+
   render() {
     return (
       <div className="app">
+        <button onClick={this.loadSampleTasks}>Load sample tasks</button>
+        <button onClick={this.loadSite}>Load site</button>
         <Projects projects={this.state.projects} />
         <Contexts contexts={this.state.contexts} />
-        <Tasks
-          loadSampleTasks={this.loadSampleTasks}
-          tasks={this.state.tasks}
-          loadProjects={this.loadProjects}
-          loadContexts={this.loadContexts}
-        />
+        <Tasks tasks={this.state.tasks} />
       </div>
     );
   }
