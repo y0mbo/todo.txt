@@ -16,9 +16,14 @@ const TagCount = css.span`
 
 class Projects extends React.Component {
   render() {
+    var header;
+    if (Object.keys(this.props.projects).length > 0) {
+      header = <h2>Projects</h2>;
+    }
+
     return (
       <div>
-        <h2>Projects</h2>
+        {header}
         <Tags>
           {Object.keys(this.props.projects).map((key) => (
             <li key={key}>
