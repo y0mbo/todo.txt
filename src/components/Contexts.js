@@ -11,6 +11,7 @@ class Contexts extends React.Component {
   render() {
     return (
       <div>
+        <h2>Contexts</h2>
         <Tags>
           {Object.keys(this.props.contexts).map((key) => (
             <li key={key}>

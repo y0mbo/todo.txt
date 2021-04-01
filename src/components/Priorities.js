@@ -13,6 +13,7 @@ class Priorities extends React.Component {
   render() {
     return (
       <div>
+        <h2>Priorities</h2>
         <Tags>
           {Object.keys(this.props.priorities).map((key) => (
             <li key={key}>
