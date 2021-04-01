@@ -1,5 +1,6 @@
 import React from "react";
 import Contexts from "./Contexts";
+import Priorities from "./Priorities";
 import Projects from "./Projects";
 import Tasks from "./Tasks";
 import sampleTasks from "../sampleTasks";
@@ -72,7 +73,7 @@ class App extends React.Component {
 
     // get all the unique priorities from the task list
     let taskPriorities = Object.values(tasks)
-      .map((task) => task.priorities)
+      .map((task) => task.priority)
       .filter((x) => x !== undefined)
       .sort();
 
@@ -104,6 +105,7 @@ class App extends React.Component {
         <button onClick={this.loadSite}>Load site</button>
         <Projects projects={this.state.projects} />
         <Contexts contexts={this.state.contexts} />
+        <Priorities priorities={this.state.priorities} />
         <Tasks tasks={this.state.tasks} />
       </div>
     );
