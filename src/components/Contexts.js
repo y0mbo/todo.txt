@@ -9,9 +9,14 @@ const Tags = css.ul`
 
 class Contexts extends React.Component {
   render() {
+    var header;
+    if (Object.keys(this.props.contexts).length > 0) {
+      header = <h2>Contexts</h2>;
+    }
+
     return (
       <div>
-        <h2>Contexts</h2>
+        {header}
         <Tags>
           {Object.keys(this.props.contexts).map((key) => (
             <li key={key}>

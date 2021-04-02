@@ -11,9 +11,13 @@ const TagCount = css.span`
 
 class Priorities extends React.Component {
   render() {
+    var header;
+    if (Object.keys(this.props.priorities).length > 0) {
+      header = <h2>Priorities</h2>;
+    }
     return (
       <div>
-        <h2>Priorities</h2>
+        {header}
         <Tags>
           {Object.keys(this.props.priorities).map((key) => (
             <li key={key}>
