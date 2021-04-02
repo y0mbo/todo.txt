@@ -1,21 +1,21 @@
 import React from "react";
-import styled from "styled-components";
+import css from "styled-components";
 
-const TaskStyle = styled.div`
+const TaskStyle = css.div`
   color: #333;
   font-size: 1em;
   font-family: arial;
   margin-bottom: 10px;
 `;
-const Priority = styled.span`
+const Priority = css.span`
   color: #0033ff;
   padding-right: 10px;
 `;
-const CreateDate = styled.span`
+const CreateDate = css.span`
   color: #009900;
   padding-right: 10px;
 `;
-const Raw = styled.div`
+const Raw = css.div`
   font-size: 0.8rem;
   color: #999;
 `;
