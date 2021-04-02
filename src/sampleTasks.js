@@ -29,8 +29,9 @@ const sampleTasks = {
     contexts: "@context",
     createDate: "2021-03-12",
     projects: "+banana",
-    description: "Task with @context +banana",
-    raw: "2021-03-12 Task with @context +banana tid:a",
+    description: "Task with a @context inside the sentence +banana split.",
+    raw:
+      "2021-03-12 Task with a @context inside the sentence +banana split. tid:a",
   },
 };
 
