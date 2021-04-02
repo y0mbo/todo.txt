@@ -1,5 +1,6 @@
 import React from "react";
 import css from "styled-components";
+import { TagCount } from "../css/style.js";
 
 const Tags = css.ul`
   margin: 1em 0 0;
@@ -20,7 +21,7 @@ class Contexts extends React.Component {
         <Tags>
           {Object.keys(this.props.contexts).map((key) => (
             <li key={key}>
-              {key} <span>{this.props.contexts[key]}</span>
+              {key} <TagCount>{this.props.contexts[key]}</TagCount>
             </li>
           ))}
         </Tags>
