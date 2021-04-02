@@ -9,7 +9,7 @@ const Tags = css.ul`
 
 const TagStyle = css.li`
 
-  }
+  
 `;
 const TagCount = css.span`
 `;
