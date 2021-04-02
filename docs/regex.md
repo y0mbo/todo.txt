@@ -10,8 +10,8 @@ This is a multiple work @contexts @task
 2019-01-02 This is a task @work +home
 2020-01-02 This is another task +phone @work
 2019-01-01 +project Task @context
-+priority is a priority
-(A) THis is a valid priority
++project is a project
+(A) This is a valid priority
 (AB) This is not a priority
 Not a valid priority Really gotta call Mom (A) @phone @someday
 (b) Not a valid priority Get back to the boss
@@ -20,10 +20,10 @@ Not a valid priority Really gotta call Mom (A) @phone @someday
 (A) 2011-03-02 Valid create date Call Mom
 (A) Not a create date 2011-03-02
 Learn how to add 2+2 not a valid project
-x 2011-03-03 Call Mom Complete task
-xylophone lesson not a complete task
-X 2012-01-01 Make resolutions not a complete task
-(A) x Find ticket prices not a complete task
+x 2011-03-03 Call Mom. This is a completed task
+xylophone lesson not a completed task
+X 2012-01-01 This is not a completed task
+(A) x Find ticket prices not a completed task
 x 2011-03-02 2011-03-01 Review Tim's pull request valid closed task
 Valid key:value pair
 Valid key value pair due:2019-02-02
