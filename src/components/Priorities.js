@@ -6,6 +6,10 @@ const Tags = css.ul`
 	padding: 0;
 	list-style: none;
 `;
+const Priority = css.span`
+  color: #0033ff;
+  padding-right: 10px;
+`;
 const TagCount = css.span`
 `;
 
@@ -21,7 +25,8 @@ class Priorities extends React.Component {
         <Tags>
           {Object.keys(this.props.priorities).map((key) => (
             <li key={key}>
-              {key} <TagCount>{this.props.priorities[key]}</TagCount>
+              <Priority>({key})</Priority>{" "}
+              <TagCount>{this.props.priorities[key]}</TagCount>
             </li>
           ))}
         </Tags>
