@@ -4,7 +4,6 @@ import css from "styled-components";
 const TaskStyle = css.div`
   color: #333;
   font-size: 1em;
-  font-family: arial;
   margin-bottom: 10px;
 `;
 const Priority = css.span`

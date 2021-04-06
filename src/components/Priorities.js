@@ -1,5 +1,6 @@
 import React from "react";
 import css from "styled-components";
+import { TagCount } from "../css/style.js";
 
 const Tags = css.ul`
   margin: 1em 0 0;
@@ -8,9 +9,6 @@ const Tags = css.ul`
 `;
 const Priority = css.span`
   color: #0033ff;
-  padding-right: 10px;
-`;
-const TagCount = css.span`
 `;
 
 class Priorities extends React.Component {

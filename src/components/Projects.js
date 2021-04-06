@@ -1,5 +1,6 @@
 import React from "react";
 import css from "styled-components";
+import { TagCount } from "../css/style.js";
 
 const Tags = css.ul`
   margin: 1em 0 0;
@@ -10,8 +11,6 @@ const Tags = css.ul`
 const TagStyle = css.li`
 
   
-`;
-const TagCount = css.span`
 `;
 
 class Projects extends React.Component {

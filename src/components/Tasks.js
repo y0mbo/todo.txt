@@ -8,6 +8,12 @@ const TaskList = css.ul`
 	padding: 0;
 `;
 
+const Tags = css.ul`
+  margin: 1em 0 0;
+	padding: 0;
+	list-style: none;
+`;
+
 class Tasks extends React.Component {
   render() {
     return (

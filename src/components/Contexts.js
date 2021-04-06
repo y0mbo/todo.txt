@@ -1,11 +1,6 @@
 import React from "react";
 import css from "styled-components";
-
-const Tags = css.ul`
-  margin: 1em 0 0;
-	padding: 0;
-	list-style: none;
-`;
+import { Tags, Tag, TagCount } from "../css/style.js";
 
 class Contexts extends React.Component {
   render() {
@@ -15,13 +10,13 @@ class Contexts extends React.Component {
     }
 
     return (
-      <div>
+      <div class="contexts">
         {header}
         <Tags>
           {Object.keys(this.props.contexts).map((key) => (
-            <li key={key}>
-              {key} <span>{this.props.contexts[key]}</span>
-            </li>
+            <Tag key={key}>
+              {key} <TagCount>{this.props.contexts[key]}</TagCount>
+            </Tag>
           ))}
         </Tags>
       </div>
