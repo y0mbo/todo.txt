@@ -60,6 +60,11 @@ export const TagAnchor = css.a`
     background:#fff;
     box-shadow:-1px -1px 2px #004977;
   }
+
+  &:hover {
+    background:#555;
+  }
+  &:hover:before{border-color:transparent #555 transparent transparent;}
   `;
 
 export const TagCount = css.span`
