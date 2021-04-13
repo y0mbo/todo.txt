@@ -1,17 +1,6 @@
 import React from "react";
 import css from "styled-components";
-import { TagCount } from "../css/style.js";
-
-const Tags = css.ul`
-  margin: 1em 0 0;
-	padding: 0;
-	list-style: none;
-`;
-
-const TagStyle = css.li`
-
-  
-`;
+import { Tags, Tag, TagAnchor, TagCount } from "../css/style.js";
 
 class Projects extends React.Component {
   render() {
@@ -21,13 +10,16 @@ class Projects extends React.Component {
     }
 
     return (
-      <div>
+      <div class="projects">
         {header}
         <Tags>
           {Object.keys(this.props.projects).map((key) => (
-            <li key={key}>
-              {key} <TagCount>{this.props.projects[key]}</TagCount>
-            </li>
+          <Tag key={key}>
+          <TagAnchor>
+            {key} <TagCount>{this.props.projects[key]}</TagCount>
+          </TagAnchor>
+        </Tag>
+
           ))}
         </Tags>
       </div>
