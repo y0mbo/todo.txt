@@ -1,5 +1,5 @@
 import React from "react";
-import Style from "../css/style.scss";
+
 import Contexts from "./Contexts";
 import Priorities from "./Priorities";
 import Projects from "./Projects";
