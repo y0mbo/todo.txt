@@ -45,7 +45,7 @@ Given I have not created any tasks,
 Given I have not scheduled any tasks,
  When I view my schedule,
  Then I should see a message saying I have no scheduled tasks.
-
+```
 
 ### Scenario: I have open tasks
 
