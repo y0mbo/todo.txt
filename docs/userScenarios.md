@@ -1,5 +1,12 @@
 # User Scenarios
 
+## Template
+```
+When [situation]
+I want to [motivation]
+So I can [expected outcome]
+```
+
 ## Title: Creating a task list
 
 ```
@@ -18,13 +25,27 @@ I want to see my task list,
 So I can work on the things I need to do.
 ```
 
+```
+When I open the application,
+I want to see my schedule,
+So I can work on the things I need to do.
+```
+
 ### Scenario: I have not created any tasks
 
 ```
 Given I have not created any tasks,
  When I view my task list,
- Then I should see a message that says I have no tasks.
+ Then I should see a message saying I have no tasks.
 ```
+
+### Scenario: I have not scheduled any tasks
+
+```
+Given I have not scheduled any tasks,
+ When I view my schedule,
+ Then I should see a message saying I have no scheduled tasks.
+
 
 ### Scenario: I have open tasks
 
