@@ -1,6 +1,6 @@
 # todo.txt
 
-An implementation of Gina T's todo.txt format. This project currently does not have a name.
+An implementation of Gina T's todo.txt format. This project is currently using the codename "Duet".
 
 I read somewhere that every developer eventually creates a todo app. I guess it's my turn.
 
