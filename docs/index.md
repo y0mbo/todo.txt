@@ -1,6 +1,6 @@
 # Todo.txt implementation
 
-This is the documentation for y0mbo's todo.txt.
+This is the documentation for y0mbo's todo.txt (codename: Duet).
 
 ## Research
 
