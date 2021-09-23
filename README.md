@@ -19,6 +19,6 @@ The documentation for the project can be found in [/docs](/docs).
 
 One problem with todo lists is that they don't force you to make commitments that help you get things done.
 
-The most organized people schedule the things that need to get done. Not only doe sthis include tasks that are urgent, but also those that are important but not urgent.
+The most organized people schedule the things that need to get done. Not only doe this include tasks that are urgent, but also those that are important but not urgent.
 
 The best todo applications should include scheduling the tasks you want to get done in order to move them forward.
