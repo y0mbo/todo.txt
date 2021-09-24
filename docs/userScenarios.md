@@ -6,12 +6,18 @@ When [situation]
 I want to [motivation]
 So I can [expected outcome]
 ```
+## Title: First time
+```
+When I open the application for the first time
+I want to understand how to use the application
+So I can get the benefit of tracking my obligations
+```
 
 ## Title: Creating a task list
 
 ```
-When I have something I need to do,
-I want to create a task,
+When I have something I need to do
+I want to create a task and put it on the calendar
 So I can remember to do it.
 ```
 
