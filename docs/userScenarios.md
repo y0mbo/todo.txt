@@ -7,11 +7,32 @@ I want to [motivation]
 So I can [expected outcome]
 ```
 
+## Title: Using a calendar-based todo list.
+```
+When I have something I need to do
+I want to put it on my calender
+So I remember to do it at a certain time
+```
+
+## Title: First time
+```
+When I open the application for the first time
+I want to understand how to use the application
+So I can get the benefit of tracking my obligations
+```
+
+## Title: Default to today
+```
+When I open the application
+I want to see today's task list
+So I can work with today's obligations
+```
+
 ## Title: Creating a task list
 
 ```
-When I have something I need to do,
-I want to create a task,
+When I have something I need to do
+I want to create a task and put it on the calendar
 So I can remember to do it.
 ```
 
