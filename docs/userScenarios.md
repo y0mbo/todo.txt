@@ -11,7 +11,7 @@ So I can [expected outcome]
 ```
 When I have something I need to do
 I want to put it on my calender
-So I remember to do it at a certain time
+So I can get it done because its scheduled
 ```
 
 ## Title: First time
