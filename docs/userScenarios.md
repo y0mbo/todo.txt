@@ -81,9 +81,17 @@ Given I have created at least one task,
 ## Creating a task
 
 ```
-When
-I want to
-So I can
+When I need to do something
+I want to create an item on the calendar
+So I can do it at a specific time
+```
+
+### Scenario: If I hit a hot key, it opens a new event dialog
+
+```
+Given the focus on a calendar day
+When I click "n", "a", or "i"
+Then a dialog opens to create a new event
 ```
 
 ---
