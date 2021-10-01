@@ -3,12 +3,14 @@ import React from "react";
 import Contexts from "./Contexts";
 import Priorities from "./Priorities";
 import Projects from "./Projects";
+import Events from "./Events";
 import Tasks from "./Tasks";
 import sampleTasks from "../sampleTasks";
 
 class App extends React.Component {
   state = {
     contexts: {},
+    events: {},
     priorities: {},
     projects: {},
     tasks: {},
@@ -108,6 +110,7 @@ class App extends React.Component {
         <Contexts contexts={this.state.contexts} />
         <Priorities priorities={this.state.priorities} />
         <Tasks tasks={this.state.tasks} />
+        <Events events={this.state.events} />
       </div>
     );
   }
