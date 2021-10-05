@@ -1,7 +1,7 @@
 import React from "react";
 import css from "styled-components";
 
-class Event extends React.Component {
+class CalendarEvent extends React.Component {
     render () {
 
         return (
@@ -11,4 +11,4 @@ class Event extends React.Component {
     }
 }
 
-export default Event;
+export default CalendarEvent;
