@@ -3,12 +3,15 @@ import React from "react";
 import Contexts from "./Contexts";
 import Priorities from "./Priorities";
 import Projects from "./Projects";
+import CalendarEvents from "./CalendarEvents";
 import Tasks from "./Tasks";
+import sampleEvents from "../sampleEvents";
 import sampleTasks from "../sampleTasks";
 
 class App extends React.Component {
   state = {
     contexts: {},
+    calendarEvents: {},
     priorities: {},
     projects: {},
     tasks: {},
@@ -16,6 +19,10 @@ class App extends React.Component {
 
   loadSampleTasks = () => {
     this.setState({ tasks: sampleTasks });
+  };
+
+  loadSampleEvents = () => {
+    this.setState({ calendarEvents: sampleEvents });
   };
 
   loadContexts = () => {
@@ -95,6 +102,7 @@ class App extends React.Component {
 
   loadSite = () => {
     this.loadSampleTasks();
+    this.loadSampleEvents();
     this.loadProjects();
     this.loadContexts();
     this.loadPriorities();
@@ -108,6 +116,7 @@ class App extends React.Component {
         <Contexts contexts={this.state.contexts} />
         <Priorities priorities={this.state.priorities} />
         <Tasks tasks={this.state.tasks} />
+        <CalendarEvents calendarEvents={this.state.calendarEvents} />
       </div>
     );
   }

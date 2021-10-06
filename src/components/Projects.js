@@ -10,7 +10,7 @@ class Projects extends React.Component {
     }
 
     return (
-      <div class="projects">
+      <div className="projects">
         {header}
         <Tags>
           {Object.keys(this.props.projects).map((key) => (

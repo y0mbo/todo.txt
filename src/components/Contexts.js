@@ -10,7 +10,7 @@ class Contexts extends React.Component {
     }
 
     return (
-      <div class="contexts">
+      <div className="contexts">
         {header}
         <Tags>
           {Object.keys(this.props.contexts).map((key) => (
