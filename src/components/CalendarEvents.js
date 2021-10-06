@@ -9,8 +9,8 @@ const EventList = css.ul`
 `;
 
 class CalendarEvents extends React.Component {
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <h2>Events go here.</h2>
                 <EventList>
