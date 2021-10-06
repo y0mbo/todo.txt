@@ -22,7 +22,7 @@ class App extends React.Component {
   };
 
   loadSampleEvents = () => {
-    this.setState({ events: sampleEvents });
+    this.setState({ calendarEvents: sampleEvents });
   };
 
   loadContexts = () => {
