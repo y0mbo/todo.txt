@@ -112,11 +112,20 @@ class App extends React.Component {
     return (
       <div className="app">
         <button onClick={this.loadSite}>Load site</button>
+        {/*
         <Projects projects={this.state.projects} />
         <Contexts contexts={this.state.contexts} />
+        
         <Priorities priorities={this.state.priorities} />
-        <Tasks tasks={this.state.tasks} />
-        <CalendarEvents calendarEvents={this.state.calendarEvents} />
+        */}
+        <main class="container">
+          <div class="tasklist">
+            <Tasks tasks={this.state.tasks} />
+          </div>
+          <div class="calendar">
+            <CalendarEvents calendarEvents={this.state.calendarEvents} />
+          </div>
+        </main>
       </div>
     );
   }
