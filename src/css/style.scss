@@ -17,3 +17,7 @@ body {
 }
 .tasklist { grid-area: tasklist; }
 .calendar { grid-area: calendar; }
+
+.calContainer {
+  display: grid;
+}
