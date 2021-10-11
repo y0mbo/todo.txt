@@ -26,9 +26,38 @@ body {
   grid-auto-flow: row;
 }
 
-.time {border-bottom: 1px dashed #94939e;}
+.time { border-bottom: 1px solid #000;}
+.hour {border-bottom: 1px dashed #94939e;}
 
 
-.ht00 { grid-area: 1 / 1 / 4 / 1 }
+.ht00 { grid-area: 1 / 1 / 5 / 2 }
+.ht01 { grid-area: 5 / 1 / 9 / 2 }
+.ht02 { grid-area: 9 / 1 / 13 / 2 }
+.ht03 { grid-area: 13 / 1 / 17 / 2 }
+.ht04 { grid-area: 17 / 1 / 21 / 2 }
+.ht05 { grid-area: 21 / 1 / 25 / 2 }
+.ht06 { grid-area: 25 / 1 / 29 / 2 }
+.ht07 { grid-area: 29 / 1 / 33 / 2 }
+.ht08 { grid-area: 33 / 1 / 37 / 2 }
+.ht09 { grid-area: 37 / 1 / 41 / 2 }
+.ht10 { grid-area: 41 / 1 / 45 / 2 }
+.ht11 { grid-area: 45 / 1 / 49 / 2 }
+.ht12 { grid-area: 49 / 1 / 53 / 2 }
+.ht13 { grid-area: 53 / 1 / 57 / 2 }
+.ht14 { grid-area: 57 / 1 / 61 / 2 }
+.ht15 { grid-area: 61 / 1 / 65 / 2 }
+.ht16 { grid-area: 65 / 1 / 69 / 2 }
+.ht17 { grid-area: 69 / 1 / 73 / 2 }
+.ht18 { grid-area: 73 / 1 / 77 / 2 }
+.ht19 { grid-area: 77 / 1 / 81 / 2 }
+.ht20 { grid-area: 81 / 1 / 85 / 2 }
+.ht21 { grid-area: 85 / 1 / 89 / 2 }
+.ht22 { grid-area: 89 / 1 / 93 / 2 }
+.ht23 { grid-area: 93 / 1 / 97 / 2 }
 
-.ht00 {background-color: red;}
+
+
+.h0000 { grid-area: 1 / 1 / 4 / 2 }
+
+.ht00, .ht04, .ht07, .ht10, .ht13, .ht16, .ht19, .ht22  {background-color: red;}
+.ht01, .ht05, .ht08, .ht11, .ht14, .ht17, .ht20, .ht23 {background-color: blue;}
