@@ -122,6 +122,33 @@ class CalendarEvents extends React.Component {
                     <div class="time t2330"></div>
                     <div class="time t2345"></div>
 
+                    {/* divs for the hour increments */}
+                    <div class="hour t0000"></div>
+                    <div class="hour t0100"></div>
+                    <div class="hour t0200"></div>
+                    <div class="hour t0300"></div>
+                    <div class="hour t0400"></div>
+                    <div class="hour t0500"></div>
+                    <div class="hour t0600"></div>
+                    <div class="hour t0700"></div>
+                    <div class="hour t0800"></div>
+                    <div class="hour t0900"></div>
+                    <div class="hour t1000"></div>
+                    <div class="hour t1100"></div>
+                    <div class="hour t1200"></div>
+                    <div class="hour t1300"></div>
+                    <div class="hour t1400"></div>
+                    <div class="hour t1500"></div>
+                    <div class="hour t1600"></div>
+                    <div class="hour t1700"></div>
+                    <div class="hour t1800"></div>
+                    <div class="hour t1900"></div>
+                    <div class="hour t2000"></div>
+                    <div class="hour t2100"></div>
+                    <div class="hour t2200"></div>
+                    <div class="hour t2300"></div>
+                    
+
 
                 </div>
             </div>

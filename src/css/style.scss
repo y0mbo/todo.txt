@@ -18,6 +18,12 @@ body {
 .tasklist { grid-area: tasklist; }
 .calendar { grid-area: calendar; }
 
-.day, .calContainer {
+.day {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1.2em;
+  gap: 0px 0px;
+  grid-auto-flow: row;
 }
+
+.time {border-bottom: 1px dashed #94939e;}
