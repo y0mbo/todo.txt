@@ -123,33 +123,58 @@ class CalendarEvents extends React.Component {
                     <div class="time t2345"></div>
 
                     {/* divs for the hour increments */}
-                    <div class="hour t0000"></div>
-                    <div class="hour t0100"></div>
-                    <div class="hour t0200"></div>
-                    <div class="hour t0300"></div>
-                    <div class="hour t0400"></div>
-                    <div class="hour t0500"></div>
-                    <div class="hour t0600"></div>
-                    <div class="hour t0700"></div>
-                    <div class="hour t0800"></div>
-                    <div class="hour t0900"></div>
-                    <div class="hour t1000"></div>
-                    <div class="hour t1100"></div>
-                    <div class="hour t1200"></div>
-                    <div class="hour t1300"></div>
-                    <div class="hour t1400"></div>
-                    <div class="hour t1500"></div>
-                    <div class="hour t1600"></div>
-                    <div class="hour t1700"></div>
-                    <div class="hour t1800"></div>
-                    <div class="hour t1900"></div>
-                    <div class="hour t2000"></div>
-                    <div class="hour t2100"></div>
-                    <div class="hour t2200"></div>
-                    <div class="hour t2300"></div>
+                    <div class="hour h0000"></div>
+                    <div class="hour h0100"></div>
+                    <div class="hour h0200"></div>
+                    <div class="hour h0300"></div>
+                    <div class="hour h0400"></div>
+                    <div class="hour h0500"></div>
+                    <div class="hour h0600"></div>
+                    <div class="hour h0700"></div>
+                    <div class="hour h0800"></div>
+                    <div class="hour h0900"></div>
+                    <div class="hour h1000"></div>
+                    <div class="hour h1100"></div>
+                    <div class="hour h1200"></div>
+                    <div class="hour h1300"></div>
+                    <div class="hour h1400"></div>
+                    <div class="hour h1500"></div>
+                    <div class="hour h1600"></div>
+                    <div class="hour h1700"></div>
+                    <div class="hour h1800"></div>
+                    <div class="hour h1900"></div>
+                    <div class="hour h2000"></div>
+                    <div class="hour h2100"></div>
+                    <div class="hour h2200"></div>
+                    <div class="hour h2300"></div>
+
+                    {/* divs for the hour titles */}
+                    <div class="htitle ht00">12am</div>
+                    <div class="htitle ht01">1am</div>
+                    <div class="htitle ht02">2am</div>
+                    <div class="htitle ht03">3am</div>
+                    <div class="htitle ht04">4am</div>
+                    <div class="htitle ht05">5am</div>
+                    <div class="htitle ht06">6am</div>
+                    <div class="htitle ht07">7am</div>
+                    <div class="htitle ht08">8am</div>
+                    <div class="htitle ht09">9am</div>
+                    <div class="htitle ht10">10am</div>
+                    <div class="htitle ht11">11am</div>
+                    <div class="htitle ht12">12pm</div>
+                    <div class="htitle ht13">1pm</div>
+                    <div class="htitle ht14">2pm</div>
+                    <div class="htitle ht15">3pm</div>
+                    <div class="htitle ht16">4pm</div>
+                    <div class="htitle ht17">5pm</div>
+                    <div class="htitle ht18">6pm</div>
+                    <div class="htitle ht19">7pm</div>
+                    <div class="htitle ht20">8pm</div>
+                    <div class="htitle ht21">9pm</div>
+                    <div class="htitle ht22">10pm</div>
+                    <div class="htitle ht23">11pm</div>
                     
-
-
+                    
                 </div>
             </div>
         );
