@@ -101,7 +101,7 @@ class CalendarEvents extends React.Component {
                     <div class="time t1815"></div>
                     <div class="time t1830"></div>
                     <div class="time t1845"></div>
-                    <div class="time t1800"></div>
+                    <div class="time t1900"></div>
                     <div class="time t1915"></div>
                     <div class="time t1930"></div>
                     <div class="time t1945"></div>
