@@ -22,7 +22,7 @@ class CalendarEvents extends React.Component {
                         <CalendarEvent key={key} id={key} details={this.props.calendarEvents[key]} />
                     ))}
                 </EventList>
-                <h2>Test calendar</h2>
+                <h2>Monday 11 Oct 2022</h2>
                 <div class="day">
                     {/*<!-- divs for the 15-minute increments -->*/}
                     <div class="time t0000"></div>
@@ -57,45 +57,45 @@ class CalendarEvents extends React.Component {
                     <div class="time t0715"></div>
                     <div class="time t0730"></div>
                     <div class="time timelast t0745"></div>
-                    <div class="time t0800"></div>
-                    <div class="time t0815"></div>
-                    <div class="time t0830"></div>
-                    <div class="time timelast t0845"></div>
-                    <div class="time t0900"></div>
-                    <div class="time t0915"></div>
-                    <div class="time t0930"></div>
-                    <div class="time timelast t0945"></div>
-                    <div class="time t1000"></div>
-                    <div class="time t1015"></div>
-                    <div class="time t1030"></div>
-                    <div class="time timelast t1045"></div>
-                    <div class="time t1100"></div>
-                    <div class="time t1115"></div>
-                    <div class="time t1130"></div>
-                    <div class="time timelast t1145"></div>
+                    <div class="time work first t0800"><div class="contextWork">@work</div></div>
+                    <div class="time work t0815"></div>
+                    <div class="time work t0830"></div>
+                    <div class="time work timelast t0845"></div>
+                    <div class="time work t0900"><div class="contextWork">@work</div></div>
+                    <div class="time work t0915"></div>
+                    <div class="time work t0930"></div>
+                    <div class="time work timelast t0945"></div>
+                    <div class="time work t1000"></div>
+                    <div class="time work t1015"></div>
+                    <div class="time work t1030"></div>
+                    <div class="time work timelast t1045"></div>
+                    <div class="time work t1100"></div>
+                    <div class="time work t1115"></div>
+                    <div class="time work t1130"></div>
+                    <div class="time work timelast t1145"></div>
                     <div class="time t1200"></div>
                     <div class="time t1215"></div>
-                    <div class="time t1230"></div>
-                    <div class="time timelast t1245"></div>
-                    <div class="time t1300"></div>
-                    <div class="time t1315"></div>
-                    <div class="time t1330"></div>
-                    <div class="time timelast t1345"></div>
-                    <div class="time t1400"></div>
-                    <div class="time t1415"></div>
-                    <div class="time t1430"></div>
-                    <div class="time timelast t1445"></div>
-                    <div class="time t1500"></div>
-                    <div class="time t1515"></div>
-                    <div class="time t1530"></div>
-                    <div class="time timelast t1545"></div>
-                    <div class="time t1600"></div>
-                    <div class="time t1615"></div>
-                    <div class="time t1630"></div>
-                    <div class="time timelast t1645"></div>
-                    <div class="time t1700"></div>
-                    <div class="time t1715"></div>
-                    <div class="time t1730"></div>
+                    <div class="time work first t1230"><div class="contextWork">@work</div></div>
+                    <div class="time work timelast t1245"></div>
+                    <div class="time work t1300"></div>
+                    <div class="time work t1315"></div>
+                    <div class="time work t1330"></div>
+                    <div class="time work timelast t1345"></div>
+                    <div class="time work t1400"></div>
+                    <div class="time work t1415"></div>
+                    <div class="time work t1430"></div>
+                    <div class="time work timelast t1445"></div>
+                    <div class="time work t1500"></div>
+                    <div class="time work t1515"></div>
+                    <div class="time work t1530"></div>
+                    <div class="time work timelast t1545"></div>
+                    <div class="time work t1600"></div>
+                    <div class="time work t1615"></div>
+                    <div class="time work t1630"></div>
+                    <div class="time work timelast t1645"></div>
+                    <div class="time work t1700"></div>
+                    <div class="time work t1715"></div>
+                    <div class="time work t1730"></div>
                     <div class="time timelast t1745"></div>
                     <div class="time t1800"></div>
                     <div class="time t1815"></div>
