@@ -23,3 +23,8 @@ The most organized people schedule the things that need to get done. Not only do
 
 The best todo applications should include scheduling the tasks you want to get done in order to move them forward.
 
+## A screenshot
+
+Here's what the application looks like at the moment:
+
+![The Duet Screenshot](/docs/screenshot.jpg "Duet Screenshot")
