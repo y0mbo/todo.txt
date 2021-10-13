@@ -202,8 +202,19 @@ body {
 .t2345 { grid-area: 96 / 2 / 96 / 3 }
 
 /* test */
-.e19152245 { grid-area: 78 / 2 / 92 / 3;
+#e19152245 { 
   background-color: rgba(255, 255, 128, .5);
+  grid-area: 78 / 2 / 92 / 3;
+  
+}
+
+#e15151630 { 
+  background-color: rgba(255, 128, 255, .75);
+  grid-area: 62 / 2 / 67 / 3;
+}
+
+.event {
+  border-radius: 1rem;
   padding: 1rem;
 }
 
@@ -211,6 +222,7 @@ body {
   .title {font-weight: 800;}
   .duration { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-bottom: .1rem; }
   .location { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
+  .context { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
 }
 
 .work {background-color: rgba(255, 128, 255, .1)}
