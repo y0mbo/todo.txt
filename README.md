@@ -27,4 +27,4 @@ The best todo applications should include scheduling the tasks you want to get d
 
 Here's what the application looks like at the moment:
 
-![The Duet Screenshot](/docs/screenshot.jpg "Duet Screenshot")
+![The Duet Screenshot](/docs/screenshot.png "Duet Screenshot")
