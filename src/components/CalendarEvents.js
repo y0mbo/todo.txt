@@ -174,7 +174,7 @@ class CalendarEvents extends React.Component {
                     <div class="htitle ht22">10pm</div>
                     <div class="htitle ht23">11pm</div>
                     
-                    <div class="event e19152245">
+                    <div class="event" id="e19152245">
                         <div class="title">This is an event</div>
                         <div class="duration">3:00</div>
                         <div class="location">Mom's house</div>

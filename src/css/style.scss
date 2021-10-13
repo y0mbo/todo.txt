@@ -202,8 +202,13 @@ body {
 .t2345 { grid-area: 96 / 2 / 96 / 3 }
 
 /* test */
-.e19152245 { grid-area: 78 / 2 / 92 / 3;
+#e19152245 { 
   background-color: rgba(255, 255, 128, .5);
+  grid-area: 78 / 2 / 92 / 3;
+}
+
+.event {
+  border-radius: 1rem;
   padding: 1rem;
 }
 
