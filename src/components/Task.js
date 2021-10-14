@@ -2,16 +2,13 @@ import React from "react";
 import css from "styled-components";
 
 const TaskStyle = css.div`
-  color: #333;
   font-size: 1em;
   margin-bottom: 10px;
 `;
 const Priority = css.span`
-  color: #0033ff;
   padding-right: 10px;
 `;
 const CreateDate = css.span`
-  color: #009900;
   padding-right: 10px;
 `;
 const Raw = css.div`

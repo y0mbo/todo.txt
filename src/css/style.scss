@@ -1,7 +1,32 @@
-$colorx: #dfdfff;
+// Grayscale Design palette: https://grayscale.design/app?lums=92.72,85.96,73.80,58.76,39.22,24.42,15.15,11.44,6.93,4.69&palettes=%23000000&filters=0%7C0&names=&labels=
+
+$grayscale-50: rgb(247, 247, 247);
+$grayscale-100: rgb(239, 239, 239);
+$grayscale-200: rgb(223, 223, 223);
+$grayscale-300: rgb(202, 202, 202);
+$grayscale-400: rgb(168, 168, 168);
+$grayscale-500: rgb(135, 135, 135);
+$grayscale-600: rgb(109, 109, 109);
+$grayscale-700: rgb(95, 95, 95);
+$grayscale-800: rgb(74, 74, 74);
+$grayscale-900: rgb(61, 61, 61);
+
+
+
+
+
+
+$colorx: $grayscale-100;
+$color-900: $grayscale-900;
+
+$context: $grayscale-200;
+$event-context: $grayscale-400;
+$event-context2: $grayscale-400;
+
 
 body {
   background: $colorx;
+  color: $color-900;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -26,8 +51,8 @@ body {
   grid-auto-flow: row;
 }
 
-.hour {border-bottom: 1px dashed #94939e;}
-.time { border-bottom: 1px dotted rgb(214, 200, 200)}
+.hour {border-bottom: 1px dashed $grayscale-400;}
+.time { border-bottom: 1px dotted $grayscale-500;}
 .timelast { border-bottom: none;}
 
 .ht00 { grid-area: 1 / 1 / 5 / 2 }
@@ -203,35 +228,45 @@ body {
 
 /* test */
 #e19152245 { 
-  background-color: rgba(255, 255, 128, .5);
+  background-color: $event-context2;
   grid-area: 78 / 2 / 92 / 3;
   
 }
 
 #e15151630 { 
-  background-color: rgba(255, 128, 255, .75);
+  background-color: $event-context;
   grid-area: 62 / 2 / 67 / 3;
 }
 
 .event {
   border-radius: 1rem;
   padding: 1rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .event {
   .title {font-weight: 800;}
-  .duration { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-bottom: .1rem; }
   .location { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
   .context { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
 }
 
-.work {background-color: rgba(255, 128, 255, .1)}
+.work {background-color: $context}
 
 .contextWork {display: none;}
-.work.first .contextWork { 
-  color: rgba(255, 255, 255, 1); 
+.work.first .contextWork {  
   display: block; 
   float: right;  
   margin-top: .5rem; 
   margin-right: .5rem; 
+}
+
+.d1 { 
+  .context { display: none;}
+}
+.d2 {
+  .context { display: none;}
+ }
+.d5 {
+  .context {display: block;}
 }
