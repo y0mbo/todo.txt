@@ -12,10 +12,6 @@ $grayscale-800: rgb(74, 74, 74);
 $grayscale-900: rgb(61, 61, 61);
 
 
-
-
-
-
 $colorx: $grayscale-100;
 $color-900: $grayscale-900;
 
@@ -254,6 +250,7 @@ body {
 .work {background-color: $context}
 
 .contextWork {display: none;}
+
 .work.first .contextWork {  
   display: block; 
   float: right;  
