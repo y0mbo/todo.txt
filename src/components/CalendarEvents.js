@@ -12,18 +12,14 @@ const EventList = css.ul`
 
 class CalendarEvents extends React.Component {
     render() {
+        var date = Date.now();
         return (
             <div>
-                <h2>Events go here.</h2>
-            
-                <EventList>
-                    {/* loop through state.events' keys and map that */}
-                    {Object.keys(this.props.calendarEvents).map((key) => (
-                        <CalendarEvent key={key} id={key} details={this.props.calendarEvents[key]} />
-                    ))}
-                </EventList>
-                <h2>Monday 11 Oct 2022</h2>
+                
+
+                <h2>Monday 11 Oct 2022 {date}</h2>
                 <div class="day">
+
                     {/*<!-- divs for the 15-minute increments -->*/}
                     <div class="time t0000"></div>
                     <div class="time t0015"></div>
@@ -185,6 +181,13 @@ class CalendarEvents extends React.Component {
                         <div class="location">Conference room C</div>    
                         <div class="context">@work</div>
                     </div>
+                    
+                <EventList>
+                    {/* loop through state.events' keys and map that */}
+                    {Object.keys(this.props.calendarEvents).map((key) => (
+                        <CalendarEvent key={key} id={key} details={this.props.calendarEvents[key]} />
+                    ))}
+                </EventList>
                 </div>
             </div>
         );
