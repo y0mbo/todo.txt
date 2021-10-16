@@ -118,11 +118,11 @@ class App extends React.Component {
         
         <Priorities priorities={this.state.priorities} />
         */}
-        <main class="container">
-          <div class="tasklist">
+        <main className="container">
+          <div className="tasklist">
             <Tasks tasks={this.state.tasks} />
           </div>
-          <div class="calendar">
+          <div className="calendar">
             <CalendarEvents calendarEvents={this.state.calendarEvents} />
           </div>
         </main>
