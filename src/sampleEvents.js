@@ -2,7 +2,7 @@
 
 const sampleEvents = {
     event1: {
-        tid: "1",
+        duid: "1",
         summary: "This is an event",
         description: "I am the very model of a modern major general. __________________________________________________________________________",
         dtstart: "2021-10-04T223000",
@@ -12,7 +12,7 @@ const sampleEvents = {
         contexts: "@context",
     },
     event2: {
-        tid: "2",
+        duid: "2",
         summary: "A second event.",
         description: "I am the very model of a modern major general.",
         dtstart: "2021-10-04T103000",
