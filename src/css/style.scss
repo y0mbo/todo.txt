@@ -223,22 +223,13 @@ body {
 .t2345 { grid-area: 96 / 2 / 96 / 3 }
 
 /* test */
-#e19152245 { 
-  background-color: $event-context2;  
-  grid-area: 78 / 2 / 92 / 3;
-}
-
-#e15151630 { 
-  background-color: $event-context;
-  grid-area: 62 / 2 / 67 / 3;
-}
-
 .event {
-  border-radius: 1rem;
+  background-color: $event-context;  
+  border-radius: 8px;
   padding: 1rem;
   margin-left: .5rem;
   margin-right: .5rem;
-  background-color: $event-context;
+  overflow: clip;
 }
 
 .event {
