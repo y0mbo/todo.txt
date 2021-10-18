@@ -229,7 +229,7 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;  
   padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-bottom: .5rem;      
   margin-left: .5rem;
   margin-right: .5rem;
   overflow: clip;
@@ -237,6 +237,11 @@ body {
   .title {font-weight: 800;}
   .location { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
   .context { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
+}
+
+.singleSizeEvent {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .work {background-color: $context}

@@ -31,6 +31,16 @@ const sampleEvents = {
         projects: "",
         contexts: "@personal",
     },
+    event4: {
+        duid: "4",
+        summary: "15 minute thing",
+        description: "Sort thing ",
+        dtstart: "2021-10-04T14:00:00",
+        dtend: "2021-10-04T14:15:00",
+        location: "At work",
+        projects: "+someProject, +anotherProject",
+        contexts: "@work",
+    },
 };
 
 export default sampleEvents;

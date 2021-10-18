@@ -31,11 +31,17 @@ class CalendarEvent extends React.Component {
 
         var totallyADuid = "duid" & duid;
 
+        var singleSizeEvent = "";
+        if (eventEnd - eventStart <= 1)
+        {
+            singleSizeEvent = "singleSizeEvent";
+        }
+
         return (
-            <div className="event d14" id={totallyADuid} style={{gridArea: eventGridArea}}>
+            <div className={'event d14 ' + singleSizeEvent} id={totallyADuid} style={{gridArea: eventGridArea}}>
                 <div className="title">{summary}</div>
                 <div className="location">{location}</div>
-                <div className="context">{contexts}</div>
+                <div className="context">{contexts}</div>           
             </div>
         )
 
