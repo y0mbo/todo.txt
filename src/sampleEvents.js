@@ -21,7 +21,7 @@ const sampleEvents = {
         projects: "+someProject, +anotherProject",
         contexts: "@work",
     },
-    event2: {
+    event3: {
         duid: "3",
         summary: "Lunch",
         description: "Naf Naf grill for lunch.",
