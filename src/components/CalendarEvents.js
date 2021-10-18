@@ -12,12 +12,15 @@ const EventList = css.ul`
 
 class CalendarEvents extends React.Component {
     render() {
-        var date = Date.now();
+        var date = new Date;
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        var formattedDate = date.toLocaleDateString("en-US", options); 
+        
         return (
             <div>
                 
 
-                <h2>Monday 11 Oct 2022 {date}</h2>
+                <h2>{formattedDate}</h2>
                 <div className="day">
 
                     {/*<!-- divs for the 15-minute increments -->*/}
