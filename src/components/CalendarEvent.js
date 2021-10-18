@@ -33,7 +33,7 @@ class CalendarEvent extends React.Component {
         var duration = eventEnd - eventStart;
 
         return (
-            <div className={'event d' + duration} id={totallyADuid} style={{gridArea: eventGridArea}}>
+            <div className={'event duration' + duration} id={totallyADuid} style={{gridArea: eventGridArea}}>
                 <div className="title">{summary}</div>
                 <div className="location">{location}</div>
                 <div className="context">{contexts}</div>           
