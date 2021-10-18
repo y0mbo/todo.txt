@@ -169,20 +169,7 @@ class CalendarEvents extends React.Component {
                     <div class="htitle ht21">9pm</div>
                     <div class="htitle ht22">10pm</div>
                     <div class="htitle ht23">11pm</div>
-                    
-                    <div class="event d14" id="e19152245">
-                        <div class="title">This is an event</div>
-                        <div class="location">Mom's house</div>
-                        <div class="context">@home</div>
-                    </div>
-
-                    <div class="event d5" id="e15151630">
-                        <div class="title">Pesky work meeting</div>
-                        <div class="location">Conference room C</div>    
-                        <div class="context">@work</div>
-                    </div>
-                    
-                
+             
                     {/* loop through state.events' keys and map that */}
                     {Object.keys(this.props.calendarEvents).map((key) => (
                         <CalendarEvent key={key} id={key} details={this.props.calendarEvents[key]} />
