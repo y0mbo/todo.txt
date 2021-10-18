@@ -3,7 +3,7 @@ import css from "styled-components";
 
 class CalendarEvent extends React.Component {
     render () {
-        const {duid, summary, location, description, contexts, dtstart, dtend} = this.props.details;
+        const {duid, summary, location, description, contexts, projects, dtstart, dtend} = this.props.details;
 
         // for now not edited since only one day is shown at a time.
         var startCol = "2";
@@ -31,9 +31,11 @@ class CalendarEvent extends React.Component {
 
         var totallyADuid = "duid" & duid;
         var duration = eventEnd - eventStart;
+        var contextClasses = contexts; // todo: remove "@"s from the string of contexts
+        var projectClasses = projects; // todo: remove "@"s from the string of projects
 
         return (
-            <div className={'event duration' + duration} id={totallyADuid} style={{gridArea: eventGridArea}}>
+            <div className={'event duration' + duration + ' ' + contextClasses + ' ' + projectClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
                 <div className="title">{summary}</div>
                 <div className="location">{location}</div>
                 <div className="context">{contexts}</div>           

@@ -9,7 +9,7 @@ const sampleEvents = {
         dtend: "2021-10-04T23:30:00",
         location: "My house",
         projects: "+project1",
-        contexts: "@context",
+        contexts: "@context @home",
     },
     event2: {
         duid: "2",

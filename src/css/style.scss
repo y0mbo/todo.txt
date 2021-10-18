@@ -11,7 +11,6 @@ $grayscale-700: rgb(95, 95, 95);
 $grayscale-800: rgb(74, 74, 74);
 $grayscale-900: rgb(61, 61, 61);
 
-
 $colorx: $grayscale-100;
 $color-900: $grayscale-900;
 
@@ -19,6 +18,11 @@ $context: $grayscale-200;
 $event-context: $grayscale-400;
 $event-context2: $grayscale-400;
 
+/* standard contexts */
+$personal-context: $grayscale-200;
+$personal-event: rgb(146, 0, 0);
+$work-context: $grayscale-200;
+$work-event: rgb(0, 0, 146);
 
 body {
   background: $colorx;
@@ -265,14 +269,7 @@ body {
 
 
 
-.work {background-color: $context}
+.work {background-color: $work-context;}
+.event.work {background-color: $work-event;}
 
-.contextWork {display: none;}
-
-.work.first .contextWork {  
-  display: block; 
-  float: right;  
-  margin-top: .5rem; 
-  margin-right: .5rem; 
-}
 

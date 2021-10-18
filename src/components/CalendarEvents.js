@@ -5,7 +5,7 @@ import css from "styled-components";
 const EventList = css.ul`
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 `;
 
 
@@ -56,11 +56,11 @@ class CalendarEvents extends React.Component {
                     <div class="time t0715"></div>
                     <div class="time t0730"></div>
                     <div class="time timelast t0745"></div>
-                    <div class="time work first t0800"><div class="contextWork">@work</div></div>
+                    <div class="time work first t0800"></div>
                     <div class="time work t0815"></div>
                     <div class="time work t0830"></div>
                     <div class="time work timelast t0845"></div>
-                    <div class="time work t0900"><div class="contextWork">@work</div></div>
+                    <div class="time work t0900"></div>
                     <div class="time work t0915"></div>
                     <div class="time work t0930"></div>
                     <div class="time work timelast t0945"></div>
@@ -74,7 +74,7 @@ class CalendarEvents extends React.Component {
                     <div class="time work timelast t1145"></div>
                     <div class="time t1200"></div>
                     <div class="time t1215"></div>
-                    <div class="time work first t1230"><div class="contextWork">@work</div></div>
+                    <div class="time work first t1230"></div>
                     <div class="time work timelast t1245"></div>
                     <div class="time work t1300"></div>
                     <div class="time work t1315"></div>
