@@ -16,29 +16,24 @@ class CalendarEvent extends React.Component {
         // take the minute part (e.g. 15) and divide it by 15 (e.g. 1) and that's the offset
         // add that to the grid offset already computed
 
-        var startDate = new Date(dtstart);
-        var endDate = new Date(dtend);
+        var startDate   = new Date(dtstart);
+        var endDate     = new Date(dtend);
 
-        var startHour = startDate.getHours();   
+        var startHour   = startDate.getHours();   
         var startMinute = startDate.getMinutes();
-        var endHour = endDate.getHours();
-        var endMinute = endDate.getMinutes();
+        var endHour     = endDate.getHours();
+        var endMinute   = endDate.getMinutes();
 
-        var eventStart = ((startHour * 4)) + (startMinute / 15) + 1;
-        var eventEnd = ((endHour * 4)) + (endMinute / 15) + 1;
+        var eventStart  = ((startHour * 4)) + (startMinute / 15) + 1;
+        var eventEnd    = ((endHour * 4)) + (endMinute / 15) + 1;
 
         var eventGridArea = eventStart + " / " + startCol + "  / " + eventEnd + " / " + endCol;
 
         var totallyADuid = "duid" & duid;
-
-        var singleSizeEvent = "";
-        if (eventEnd - eventStart <= 1)
-        {
-            singleSizeEvent = "singleSizeEvent";
-        }
+        var duration = eventEnd - eventStart;
 
         return (
-            <div className={'event d14 ' + singleSizeEvent} id={totallyADuid} style={{gridArea: eventGridArea}}>
+            <div className={'event d' + duration} id={totallyADuid} style={{gridArea: eventGridArea}}>
                 <div className="title">{summary}</div>
                 <div className="location">{location}</div>
                 <div className="context">{contexts}</div>           

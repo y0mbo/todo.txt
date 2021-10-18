@@ -234,15 +234,36 @@ body {
   margin-right: .5rem;
   overflow: clip;
 
-  .title {font-weight: 800;}
+  .title {
+    font-size: 1rem; 
+    font-weight: 800;
+  }
   .location { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
-  .context { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
+  .context, .project { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
 }
 
-.singleSizeEvent {
+.d1 {
+  padding-top: 0;
+  padding-bottom: 0; 
+  .context { display: none;}
+  .title { font-size: .75rem;}
+}
+.d2 {
   padding-top: 0;
   padding-bottom: 0;
+  .context { display: none;}
+ }
+
+.d3 {
+  .context { display: none;}
+ }
+.d5 {
+  .context { display: block;}
 }
+
+
+
+
 
 .work {background-color: $context}
 
@@ -255,12 +276,3 @@ body {
   margin-right: .5rem; 
 }
 
-.d1 { 
-  .context { display: none;}
-}
-.d2 {
-  .context { display: none;}
- }
-.d5 {
-  .context {display: block;}
-}
