@@ -50,6 +50,12 @@ body {
   grid-auto-flow: row;
 }
 
+.htitle {
+  color: $grayscale-500;
+  font-weight: bold;
+  font-size: .8rem;
+}
+
 .hour {border-bottom: 1px dashed $grayscale-400;}
 .time { border-bottom: 1px dotted $grayscale-500;}
 .timelast { border-bottom: none;}
