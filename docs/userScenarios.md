@@ -7,6 +7,7 @@ I want to [motivation]
 So I can [expected outcome]
 ```
 
+
 ## Title: Using a calendar-based todo list.
 ```
 When I have something I need to do
@@ -24,12 +25,22 @@ So I can get the benefit of tracking my obligations
 ## Title: Default to today
 ```
 When I open the application
-I want to see today's task list
+I want to see today's calendar
 So I can work with today's obligations
 ```
 
-## Title: Creating a task list
+### Scenarios
+```
+Given I have logged in
+When I go to the home page
+Then I see the 
+```
 
+
+
+----
+
+## Title: Creating a task list
 ```
 When I have something I need to do
 I want to create a task and put it on the calendar
@@ -141,6 +152,11 @@ Given <some context>,
  When <some action is done>,
  Then <such outcomes are expected to occur>.
 ```
+### Other stuff
+
+* Task list on the left. Calendar on the right.
+
+
 
 ### Notes
 
