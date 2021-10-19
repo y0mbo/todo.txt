@@ -16,13 +16,12 @@ $color-900: $grayscale-900;
 
 $context: $grayscale-200;
 $event-context: $grayscale-400;
-$event-context2: $grayscale-400;
 
 /* standard contexts */
 $personal-context: $grayscale-200;
-$personal-event: rgb(146, 0, 0);
+$personal-event: $grayscale-400;
 $work-context: $grayscale-200;
-$work-event: rgb(0, 0, 146);
+$work-event: $grayscale-400;
 
 body {
   background: $colorx;
@@ -271,5 +270,6 @@ body {
 
 .work {background-color: $work-context;}
 .event.work {background-color: $work-event;}
-
+.personal {background-color: $personal-context;}
+.event.personal {background-color: $personal-event;}
 
