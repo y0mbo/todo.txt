@@ -6,8 +6,8 @@ class CalendarEvent extends React.Component {
         const {duid, summary, location, description, contexts, projects, dtstart, dtend} = this.props.details;
 
         // for now not edited since only one day is shown at a time.
-        var startCol = "2";
-        var endCol = "3";
+        let startCol = "2";
+        let endCol = "3";
 
         // need to get the date; should be filtered to the dates on the screen.
         // given a time (e.g. 1315)
