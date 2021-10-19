@@ -16,23 +16,23 @@ class CalendarEvent extends React.Component {
         // take the minute part (e.g. 15) and divide it by 15 (e.g. 1) and that's the offset
         // add that to the grid offset already computed
 
-        var startDate   = new Date(dtstart);
-        var endDate     = new Date(dtend);
+        let startDate   = new Date(dtstart);
+        let endDate     = new Date(dtend);
 
-        var startHour   = startDate.getHours();   
-        var startMinute = startDate.getMinutes();
-        var endHour     = endDate.getHours();
-        var endMinute   = endDate.getMinutes();
+        let startHour   = startDate.getHours();   
+        let startMinute = startDate.getMinutes();
+        let endHour     = endDate.getHours();
+        let endMinute   = endDate.getMinutes();
 
-        var eventStart  = ((startHour * 4)) + (startMinute / 15) + 1;
-        var eventEnd    = ((endHour * 4)) + (endMinute / 15) + 1;
+        let eventStart  = ((startHour * 4)) + (startMinute / 15) + 1;
+        let eventEnd    = ((endHour * 4)) + (endMinute / 15) + 1;
 
-        var eventGridArea = eventStart + " / " + startCol + "  / " + eventEnd + " / " + endCol;
+        let eventGridArea = eventStart + " / " + startCol + "  / " + eventEnd + " / " + endCol;
 
-        var totallyADuid = "duid" & duid;
-        var duration = eventEnd - eventStart;
-        var contextClasses = contexts.replace(/@/g, ""); 
-        var projectClasses = projects.replace(/\+/g, '');
+        let totallyADuid = "duid" & duid;
+        let duration = eventEnd - eventStart;
+        let contextClasses = contexts.replace(/@/g, ""); 
+        let projectClasses = projects.replace(/\+/g, '');
 
         return (
             <div className={'event duration' + duration + ' ' + contextClasses + ' ' + projectClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
