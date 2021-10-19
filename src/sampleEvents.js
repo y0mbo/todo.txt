@@ -18,7 +18,7 @@ const sampleEvents = {
         dtstart: "2021-10-04T10:00:00",
         dtend: "2021-10-04T11:15:00",
         location: "At work",
-        projects: "+someProject, +anotherProject",
+        projects: "+someProject +anotherProject",
         contexts: "@work",
     },
     event3: {
@@ -38,7 +38,7 @@ const sampleEvents = {
         dtstart: "2021-10-04T14:00:00",
         dtend: "2021-10-04T14:15:00",
         location: "At work",
-        projects: "+someProject, +anotherProject",
+        projects: "+someProject +anotherProject",
         contexts: "@work",
     },
     event5: {
@@ -48,7 +48,7 @@ const sampleEvents = {
         dtstart: "2021-10-04T14:30:00",
         dtend: "2021-10-04T15:00:00",
         location: "At work",
-        projects: "+someProject, +anotherProject",
+        projects: "+someProject +anotherProject",
         contexts: "@work",
     },
 };

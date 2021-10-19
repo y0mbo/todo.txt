@@ -31,14 +31,14 @@ class CalendarEvent extends React.Component {
 
         var totallyADuid = "duid" & duid;
         var duration = eventEnd - eventStart;
-        var contextClasses = contexts; // todo: remove "@"s from the string of contexts
-        var projectClasses = projects; // todo: remove "@"s from the string of projects
+        var contextClasses = contexts.replace(/@/g, ""); 
+        var projectClasses = projects.replace(/\+/g, '');
 
         return (
             <div className={'event duration' + duration + ' ' + contextClasses + ' ' + projectClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
                 <div className="title">{summary}</div>
                 <div className="location">{location}</div>
-                <div className="context">{contexts}</div>           
+                <div className="context">{contexts}</div>                          
             </div>
         )
 
