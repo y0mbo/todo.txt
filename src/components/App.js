@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Contexts from "./Contexts";
 import Priorities from "./Priorities";
 import Projects from "./Projects";
 import CalendarEvents from "./CalendarEvents";
+import Modal from "./Modal";
 import Tasks from "./Tasks";
+
 import sampleEvents from "../sampleEvents";
 import sampleTasks from "../sampleTasks";
 
@@ -112,6 +114,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <button onClick={this.loadSite}>Load site</button>
+        <button>Test Modal</button>
         {/*
         <Projects projects={this.state.projects} />
         <Contexts contexts={this.state.contexts} />
