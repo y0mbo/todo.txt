@@ -17,6 +17,13 @@ class App extends React.Component {
     priorities: {},
     projects: {},
     tasks: {},
+    openModal: false,
+    setModal: false,
+  };
+
+  toggle = (e) => {
+    e.preventDefault();
+    this.setState({openModal: !this.state.openModal});
   };
 
   loadSampleTasks = () => {
@@ -114,7 +121,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <button onClick={this.loadSite}>Load site</button>
-        <button>Test Modal</button>
+        <button onClick={this.toggle}>Test Modal</button>
         {/*
         <Projects projects={this.state.projects} />
         <Contexts contexts={this.state.contexts} />
@@ -129,6 +136,7 @@ class App extends React.Component {
             <CalendarEvents calendarEvents={this.state.calendarEvents} />
           </div>
         </main>
+        <Modal show={this.state.openModal} title="Modal" close={this.toggle} />
       </div>
     );
   }
