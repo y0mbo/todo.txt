@@ -313,22 +313,20 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba($color: #000000, $alpha: 0.35);
+  background-color: rgba($grayscale-600, .35);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   .modal {
-    width: 30vw;
-    height: auto;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 20px;
-
-    background-color: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba($grayscale-50, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 1rem 0 rgba($grayscale-900, 0.2);
+    height: auto;
+    padding: 2rem;
+    width: 30vw;
 
     &_header {
       position: relative;
@@ -342,6 +340,7 @@ body {
         top: 0;
         right: 0;
         background: transparent;
+        border: none;
 
         img {
           width: 1rem;
@@ -357,7 +356,7 @@ body {
     }
 
     &_content {
-      border-bottom: 1px solid #dddddd;
+      border-bottom: 1px solid $grayscale-50;
       padding: 2rem 0;
     }
 
@@ -376,16 +375,16 @@ body {
         font-weight: 600;
 
         &:hover {
-          color: rgba(54, 67, 72, 0.8);
+          color: rgba($grayscale-800, 0.8);
         }
       }
       .submit {
         margin-right: 1rem;
-        background-color: #364348;
-        color: #fff;
+        background-color: $grayscale-800;
+        
 
         &:hover {
-          background-color: rgba(54, 67, 72, 0.8);
+          background-color: rgba($grayscale-800, 0.8);
         }
       }
     }

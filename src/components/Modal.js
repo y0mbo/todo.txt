@@ -1,4 +1,5 @@
 import React from "react";
+import xClose from "../img/times-solid.svg"
 
 const Modal = ({show, close}) => {
     return (
@@ -6,18 +7,17 @@ const Modal = ({show, close}) => {
             show ?
             <div className="modalContainer" onClick={close}>
                 <div className="modal">
-                    <header>
+                    <header className="modal_header">
                         <h2>Modal Title</h2>
-                        <button className="close" onClick={close}><img alt="close" /></button>
+                        <button className="close" onClick={close}><img src={xClose} alt="close" /></button>
                     </header>   
-                    <main>
+                    <main className="modal_content">
                         Main
                     </main>
-                    <footer>
-                        Footer
+                    <footer className="modal_footer">
+                        <button className="modalClose" onClick={close}>Cancel</button>
                     </footer>    
                 </div>
-                <button className="modalClose" onClick={close}>Close me</button>
             </div>
             : null
         }
