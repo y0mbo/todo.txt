@@ -330,7 +330,7 @@ body {
 
     &_header {
       position: relative;
-      border-bottom: 1px solid #dddddd;
+      border-bottom: 1px solid $grayscale-100;
       &-title {
         text-align: center;
       }
@@ -356,19 +356,18 @@ body {
     }
 
     &_content {
-      border-bottom: 1px solid $grayscale-50;
-      padding: 2rem 0;
+      border-bottom: 1px solid $grayscale-100;
+      padding: 1rem 0;
     }
 
     &_footer {
-      padding: 2rem 0;
+      padding: 1rem 0;
       padding-bottom: 0;
 
       button {
+        border-radius: 8px;
         float: right;
         padding: 0.5rem;
-
-        border-radius: 8px;
       }
       .modal-close {
         background-color: transparent;
