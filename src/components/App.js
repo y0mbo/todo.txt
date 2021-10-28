@@ -21,11 +21,6 @@ class App extends React.Component {
     setModal: false,
   };
 
-  toggle = (e) => {
-    e.preventDefault();
-    this.setState({openModal: !this.state.openModal});
-  };
-
   loadSampleTasks = () => {
     this.setState({ tasks: sampleTasks });
   };
@@ -115,6 +110,11 @@ class App extends React.Component {
     this.loadProjects();
     this.loadContexts();
     this.loadPriorities();
+  };
+
+  toggle = (e) => {
+    e.preventDefault();
+    this.setState({openModal: !this.state.openModal});
   };
 
   render() {
