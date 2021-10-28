@@ -305,3 +305,87 @@ body {
 .personal {background-color: $personal-context;}
 .event.personal {background-color: $personal-event;}
 
+
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($grayscale-600, .35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    backdrop-filter: blur(5px);
+    background-color: rgba($grayscale-50, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 1rem 0 rgba($grayscale-900, 0.2);
+    height: auto;
+    padding: 2rem;
+    width: 30vw;
+
+    &_header {
+      position: relative;
+      border-bottom: 1px solid $grayscale-100;
+      &-title {
+        text-align: center;
+      }
+
+      .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: transparent;
+        border: none;
+
+        img {
+          width: 1rem;
+          height: auto;
+          transition: all 0.3s;
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    &_content {
+      border-bottom: 1px solid $grayscale-100;
+      padding: 1rem 0;
+    }
+
+    &_footer {
+      padding: 1rem 0;
+      padding-bottom: 0;
+
+      button {
+        border-radius: 8px;
+        float: right;
+        padding: 0.5rem;
+      }
+      .modal-close {
+        background-color: transparent;
+        font-weight: 600;
+
+        &:hover {
+          color: rgba($grayscale-800, 0.8);
+        }
+      }
+      .submit {
+        margin-right: 1rem;
+        background-color: $grayscale-800;
+        
+
+        &:hover {
+          background-color: rgba($grayscale-800, 0.8);
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Contexts from "./Contexts";
 import Priorities from "./Priorities";
 import Projects from "./Projects";
 import CalendarEvents from "./CalendarEvents";
+import Modal from "./Modal";
 import Tasks from "./Tasks";
+
 import sampleEvents from "../sampleEvents";
 import sampleTasks from "../sampleTasks";
 
@@ -15,6 +17,13 @@ class App extends React.Component {
     priorities: {},
     projects: {},
     tasks: {},
+    openModal: false,
+    setModal: false,
+  };
+
+  toggle = (e) => {
+    e.preventDefault();
+    this.setState({openModal: !this.state.openModal});
   };
 
   loadSampleTasks = () => {
@@ -112,6 +121,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <button onClick={this.loadSite}>Load site</button>
+        <button onClick={this.toggle}>Test Modal</button>
         {/*
         <Projects projects={this.state.projects} />
         <Contexts contexts={this.state.contexts} />
@@ -126,6 +136,7 @@ class App extends React.Component {
             <CalendarEvents calendarEvents={this.state.calendarEvents} />
           </div>
         </main>
+        <Modal show={this.state.openModal} title="Modal" close={this.toggle} />
       </div>
     );
   }
