@@ -14,7 +14,7 @@ class CalendarEvent extends React.Component {
         // take the hour part (e.g. 13) and multiply it by 4 (e.g. 52) and add 1 (e.g. 53)
         // and that's the grid offset.
         // take the minute part (e.g. 15) and divide it by 15 (e.g. 1) and that's the offset
-        // add that to the grid offset already computed
+        // add that to the grid offset already computed (e.g. 54)
 
         let startDate   = new Date(dtstart);
         let endDate     = new Date(dtend);
