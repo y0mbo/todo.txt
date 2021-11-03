@@ -2,6 +2,11 @@ import React from "react";
 import css from "styled-components";
 
 class CalendarEvent extends React.Component {
+
+    clickCalendarEvent = (event) => {
+        this.props.showModal(this.CalendarEvent);
+    }
+
     render () {
         const {duid, summary, location, description, contexts, projects, dtstart, dtend} = this.props.details;
 
@@ -33,9 +38,9 @@ class CalendarEvent extends React.Component {
         let duration = eventEnd - eventStart;
         let contextClasses = contexts.replace(/@/g, ""); 
         let projectClasses = projects.replace(/\+/g, '');
-
+        
         return (
-            <div className={'event duration' + duration + ' ' + contextClasses + ' ' + projectClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
+            <div onClick={this.clickCalendarEvent} className={'event duration' + duration + ' ' + contextClasses + ' ' + projectClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
                 <div className="title">{summary}</div>
                 <div className="location">{location}</div>
                 <div className="context">{contexts}</div>                          

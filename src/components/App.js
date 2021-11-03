@@ -12,7 +12,7 @@ import sampleTasks from "../sampleTasks";
 
 class App extends React.Component {
   state = {
-    body: "I am the very model of a modern major general.",
+    body: "",
     contexts: {},
     calendarEvents: {},
     priorities: {},
@@ -137,7 +137,7 @@ class App extends React.Component {
             <CalendarEvents calendarEvents={this.state.calendarEvents} />
           </div>
         </main>
-        <Modal body={this.state.body} show={this.state.openModal} title={"Modal"} close={this.toggle} />
+        <Modal selectedEvent={this.state.calendarEvents[Object.keys(this.state.calendarEvents)[0]]} body={this.state.body} show={this.state.openModal} title={"Modal"} close={this.toggle} />
       </div>
     );
   }
