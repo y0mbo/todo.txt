@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import CalendarEvent from "./CalendarEvent";
+import Modal from "./Modal";
 import css from "styled-components";
 
 const EventList = css.ul`
@@ -8,9 +9,20 @@ const EventList = css.ul`
     padding: 0; 
 `;
 
-
-
 class CalendarEvents extends React.Component {
+    openModal = false;
+    setModal = false;
+    
+    showModal = (calendarEvent) => {
+        this.openModal = !this.openModal;
+        this.setState({openModal: !this.openModal});
+      };
+      
+    toggle = (e) => {
+       
+        //lthis.setState({openModal: !this.openModal});
+      };
+
     render() {
         var date = new Date;
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -18,8 +30,6 @@ class CalendarEvents extends React.Component {
         
         return (
             <div>
-                
-
                 <h2>{formattedDate}</h2>
                 <div className="day">
 
@@ -175,10 +185,11 @@ class CalendarEvents extends React.Component {
              
                     {/* loop through state.events' keys and map that */}
                     {Object.keys(this.props.calendarEvents).map((key) => (
-                        <CalendarEvent key={key} id={key} details={this.props.calendarEvents[key]} />
+                        <CalendarEvent key={key} id={key} details={this.props.calendarEvents[key]} showModal={this.showModal} />
                     ))}
                 
                 </div>
+                <Modal selectedEvent={this.props.calendarEvents[Object.keys(this.props.calendarEvents)[0]]} body={this.props.body} show={this.openModal} close={this.showModal} />
             </div>
         );
     }
