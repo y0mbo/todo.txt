@@ -31,7 +31,7 @@ class App extends React.Component {
   };
 
   loadContexts = () => {
-    const tasks = sampleTasks; //{ ...this.state.tasks };
+    const tasks = sampleTasks; //{ ...this.state.tasks }; 
     const contexts = { ...this.state.contexts };
 
     // get all the unique contexts from the task list
