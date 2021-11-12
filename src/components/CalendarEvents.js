@@ -1,14 +1,6 @@
 import React, {useState} from "react";
 import CalendarEvent from "./CalendarEvent";
 import Modal from "./Modal";
-import css from "styled-components";
-
-const EventList = css.ul`
-    list-style: none;
-    margin: 0;
-    padding: 0; 
-`;
-
 
 class CalendarEvents extends React.Component {
  
