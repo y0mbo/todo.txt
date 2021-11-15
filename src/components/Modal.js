@@ -1,18 +1,21 @@
-import React from "react";
+import React, {Component} from "react";
 import xClose from "../img/times-solid.svg"
 
-const Modal = ({show, close}) => {
+const Modal = ({body, close, show, title, selectedEvent}) => {
+
     return (
         <> {
             show ?
-            <div className="modalContainer" onClick={close}>
+            <div className="modalContainer" onClick={close}>    
                 <div className="modal">
                     <header className="modal_header">
-                        <h2>Modal Title</h2>
+                        <h2>{selectedEvent ? selectedEvent.summary : title}</h2>
                         <button className="close" onClick={close}><img src={xClose} alt="close" /></button>
-                    </header>   
+                    </header>
                     <main className="modal_content">
-                        Main
+                        {body}
+                        <div>{selectedEvent ? selectedEvent.location : null}</div>
+                        <div></div>
                     </main>
                     <footer className="modal_footer">
                         <button className="modalClose" onClick={close}>Cancel</button>

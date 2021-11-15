@@ -18,7 +18,7 @@ class Tasks extends React.Component {
   render() {
     return (
       <div>
-        <h2>The queue</h2>
+        <h2>The bin</h2>
         <TaskList>
           {/* loop through state.tasks' keys and map that. */}
           {Object.keys(this.props.tasks).map((key) => (
