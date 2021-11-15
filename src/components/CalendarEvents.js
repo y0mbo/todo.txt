@@ -3,15 +3,7 @@ import CalendarEvent from "./CalendarEvent";
 import Modal from "./Modal";
 
 class CalendarEvents extends React.Component {
- 
     
-    showModal = () => {
-        alert("You've made it to the CalendarEventS ");
-      };
-      
-    toggle = (e) => {
-      };
-
     render() {
         var date = new Date;
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -174,11 +166,10 @@ class CalendarEvents extends React.Component {
              
                     {/* loop through state.events' keys and map that */}
                     {Object.keys(this.props.calendarEvents).map((key) => (  
-                        <CalendarEvent key={key} id={key} details={this.props.calendarEvents[key]} showModal={this.props.showModal} />
+                        <CalendarEvent key={key} id={key} selectedEvent={this.props.calendarEvents[key]} showModal={this.props.showModal} />
                     ))}
                 
                 </div>
-                <Modal selectedEvent={this.props.calendarEvents[Object.keys(this.props.calendarEvents)[0]]} body={this.props.body} show={this.openModal} close={this.showModal} />
             </div>
         );
     }

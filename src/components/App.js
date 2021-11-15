@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { isValidElement, useState } from "react";
 
 import Contexts from "./Contexts";
 import Priorities from "./Priorities";
@@ -13,10 +13,12 @@ import sampleTasks from "../sampleTasks";
 class App extends React.Component {
   state = {
     body: "",
-    contexts: {},
     calendarEvents: {},
+    contexts: {},
+    currentEvent: {},
     priorities: {},
     projects: {},
+    selectedEvent: {},
     tasks: {},
     openModal: false,
     setModal: false,
@@ -111,7 +113,14 @@ class App extends React.Component {
     this.loadProjects();
     this.loadContexts();
     this.loadPriorities();
+    this.setState({selectedEvent: this.state.calendarEvents[Object.keys(this.state.calendarEvents)[0]]});
   };
+
+  showModal = (currentEvent) => {
+    console.log(currentEvent);
+    this.setState({selectedEvent: currentEvent});
+    this.setState({openModal: true});
+ };
 
   toggle = (e) => {
     e.preventDefault();
@@ -126,7 +135,7 @@ class App extends React.Component {
         {/*
         <Projects projects={this.state.projects} />
         <Contexts contexts={this.state.contexts} />
-        
+          
         <Priorities priorities={this.state.priorities} />
         */}
         <main className="container">
@@ -134,10 +143,10 @@ class App extends React.Component {
             <Tasks tasks={this.state.tasks} />
           </div>
           <div className="calendar">
-            <CalendarEvents calendarEvents={this.state.calendarEvents} />
+            <CalendarEvents calendarEvents={this.state.calendarEvents} showModal={this.showModal} />
           </div>
         </main>
-        <Modal selectedEvent={this.state.calendarEvents[Object.keys(this.state.calendarEvents)[0]]} body={this.state.body} show={this.state.openModal} title={"Modal"} close={this.toggle} />
+        <Modal selectedEvent={this.state.selectedEvent} show={this.state.openModal} title={"Modal"} close={this.toggle} />
       </div>
     );
   }

@@ -3,8 +3,13 @@ import css from "styled-components";
 
 class CalendarEvent extends React.Component {
 
+    handleClick = () => {
+        alert(this.props.selectedEvent.summary);
+        this.props.showModal(this.props.selectedEvent);
+    }
+
     render () {
-        const {duid, summary, location, description, contexts, projects, dtstart, dtend, showModal} = this.props.details;
+        const {duid, summary, location, description, contexts, projects, dtstart, dtend} = this.props.selectedEvent;
 
         // for now not edited since only one day is shown at a time.
         let startCol = "2";
@@ -36,14 +41,12 @@ class CalendarEvent extends React.Component {
         let projectClasses = projects.replace(/\+/g, '');
         
         return (
-            <div onClick={this.props.showModal} className={'event duration' + duration + ' ' + contextClasses + ' ' + projectClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
+            <div onClick={this.handleClick} className={'event duration' + duration + ' ' + contextClasses + ' ' + projectClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
                 <div className="title">{summary}</div>
                 <div className="location">{location}</div>
                 <div className="context">{contexts}</div>   
-                <button onClick={this.props.showModal}>Click</button>
             </div>
         )
-
     }
 }
 
