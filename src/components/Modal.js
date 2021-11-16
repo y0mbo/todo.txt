@@ -18,7 +18,7 @@ const Modal = ({body, close, show, title, selectedEvent}) => {
                         <div>{selectedEvent.contexts ? selectedEvent.contexts : null}</div>
                     </main>
                     <footer className="modal_footer">
-                        <button className="modalClose" onClick={close}>Cancel</button>
+                        {/*<button className="modalClose" onClick={close}>Cancel</button>*/}
                     </footer>    
                 </div>
             </div>
