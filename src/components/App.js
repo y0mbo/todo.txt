@@ -131,7 +131,6 @@ class App extends React.Component {
     return (
       <div className="app">
         <button onClick={this.loadSite}>Load site</button>
-        <button onClick={this.toggle}>Test Modal</button>
         {/*
         <Projects projects={this.state.projects} />
         <Contexts contexts={this.state.contexts} />
