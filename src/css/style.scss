@@ -299,11 +299,11 @@ body {
 .priorityZ {color: $grayscale-600;}
 
 
-
-.work {background-color: $work-context;}
-.event.work {background-color: $work-event;}
 .personal {background-color: $personal-context;}
 .event.personal {background-color: $personal-event;}
+.work {background-color: $work-context;}
+.event.work {background-color: $work-event;}
+
 
 
 /* modal */

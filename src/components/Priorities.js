@@ -1,6 +1,4 @@
 import React from "react";
-import css from "styled-components";
-import { Tags, Tag, TagAnchor, TagCount } from "../css/style.js";
 
 class Priorities extends React.Component {
   render() {
@@ -11,15 +9,15 @@ class Priorities extends React.Component {
     return (
       <div>
         {header}
-        <Tags>
+        <div className="tags">
           {Object.keys(this.props.priorities).map((key) => (
-             <Tag key={key}>
-             <TagAnchor>
-               ({key}) <TagCount>{this.props.priorities[key]}</TagCount>
-             </TagAnchor>
-           </Tag>
+             <div className="tag" key={key}>
+             <a>
+               ({key}) <span className="tagCount">{this.props.priorities[key]}</span>
+             </a>
+           </div>
           ))}
-        </Tags>
+        </div>
       </div>
     );
   }

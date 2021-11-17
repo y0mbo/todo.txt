@@ -130,22 +130,22 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <button onClick={this.loadSite}>Load site</button>
         {/*
-        <Projects projects={this.state.projects} />
-        <Contexts contexts={this.state.contexts} />
-          
-        <Priorities priorities={this.state.priorities} />
-        */}
+      */}
         <main className="container">
           <div className="tasklist">
             <Tasks tasks={this.state.tasks} />
+            <Projects projects={this.state.projects} />
+        <Contexts contexts={this.state.contexts} />
+        <Priorities priorities={this.state.priorities} />
+
           </div>
           <div className="calendar">
             <CalendarEvents calendarEvents={this.state.calendarEvents} showModal={this.showModal} />
           </div>
         </main>
         <Modal selectedEvent={this.state.selectedEvent} show={this.state.openModal} title={"Modal"} close={this.toggle} />
+      <button onClick={this.loadSite}>Load site</button>
       </div>
     );
   }

@@ -1,6 +1,4 @@
 import React from "react";
-import css from "styled-components";
-import { Tags, Tag, TagAnchor, TagCount } from "../css/style.js";
 
 class Contexts extends React.Component {
   render() {
@@ -12,15 +10,15 @@ class Contexts extends React.Component {
     return (
       <div className="contexts">
         {header}
-        <Tags>
+        <div className="tags">
           {Object.keys(this.props.contexts).map((key) => (
-            <Tag key={key}>
-              <TagAnchor>
-                {key} <TagCount>{this.props.contexts[key]}</TagCount>
-              </TagAnchor>
-            </Tag>
+            <div className="tag" key={key}>
+              <a>
+                {key} <span className="tagCount">{this.props.contexts[key]}</span>
+              </a>
+            </div>
           ))}
-        </Tags>
+        </div>
       </div>
     );
   }
