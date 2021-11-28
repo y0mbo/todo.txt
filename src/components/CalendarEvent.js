@@ -1,10 +1,8 @@
 import React from "react";
-import css from "styled-components";
 
 class CalendarEvent extends React.Component {
 
     handleClick = () => {
-        alert(this.props.selectedEvent.summary);
         this.props.showModal(this.props.selectedEvent);
     }
 

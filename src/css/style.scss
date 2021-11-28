@@ -299,14 +299,14 @@ body {
 .priorityZ {color: $grayscale-600;}
 
 
-
-.work {background-color: $work-context;}
-.event.work {background-color: $work-event;}
 .personal {background-color: $personal-context;}
 .event.personal {background-color: $personal-event;}
+.work {background-color: $work-context;}
+.event.work {background-color: $work-event;}
 
 
 
+/* modal */
 .modalContainer {
   position: fixed;
   top: 0;
@@ -325,7 +325,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 1rem 0 rgba($grayscale-900, 0.2);
     height: auto;
-    padding: 2rem;
+    padding: 0 1rem;
     width: 30vw;
 
     &_header {
@@ -357,7 +357,7 @@ body {
 
     &_content {
       border-bottom: 1px solid $grayscale-100;
-      padding: 1rem 0;
+      padding: 0;
     }
 
     &_footer {
@@ -389,3 +389,4 @@ body {
     }
   }
 }
+/* end modal */

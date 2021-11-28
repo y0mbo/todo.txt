@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import CalendarEvent from "./CalendarEvent";
-import Modal from "./Modal";
 
 class CalendarEvents extends React.Component {
     
