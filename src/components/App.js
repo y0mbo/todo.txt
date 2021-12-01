@@ -15,6 +15,7 @@ class App extends React.Component {
     body: "",
     calendarEvents: {},
     contexts: {},
+    currentDate: new Date(),
     currentEvent: {},
     priorities: {},
     projects: {},
@@ -23,6 +24,14 @@ class App extends React.Component {
     openModal: false,
     setModal: false,
   };
+
+  componentDidMount() {
+    this.loadSite();
+  };
+
+  changeDate = (date) => {
+    this.setState({ currentDate: date });
+    };
 
   loadSampleTasks = () => {
     this.setState({ tasks: sampleTasks });
@@ -114,6 +123,7 @@ class App extends React.Component {
     this.loadContexts();
     this.loadPriorities();
     this.setState({selectedEvent: this.state.calendarEvents[Object.keys(this.state.calendarEvents)[0]]});
+    this.setState({currentDate: new Date(2021,9,4)});  
   };
 
   showModal = (currentEvent) => {
@@ -130,22 +140,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        {/*
-      */}
         <main className="container">
           <div className="tasklist">
             <Tasks tasks={this.state.tasks} />
             <Projects projects={this.state.projects} />
-        <Contexts contexts={this.state.contexts} />
-        <Priorities priorities={this.state.priorities} />
-
+            <Contexts contexts={this.state.contexts} />
+            <Priorities priorities={this.state.priorities} />
           </div>
           <div className="calendar">
-            <CalendarEvents calendarEvents={this.state.calendarEvents} showModal={this.showModal} />
+            <CalendarEvents currentDate={this.state.currentDate} calendarEvents={this.state.calendarEvents} showModal={this.showModal} changeDate={this.changeDate} />
           </div>
         </main>
         <Modal selectedEvent={this.state.selectedEvent} show={this.state.openModal} title={"Modal"} close={this.toggle} />
-      <button onClick={this.loadSite}>Load site</button>
       </div>
     );
   }

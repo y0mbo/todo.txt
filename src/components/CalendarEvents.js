@@ -1,16 +1,31 @@
 import React, {useState} from "react";
 import CalendarEvent from "./CalendarEvent";
 
+function addDays(date, days){
+    var res = new Date(date);
+    res.setDate(res.getDate() + days);
+    return res;
+}
+
 class CalendarEvents extends React.Component {
-    
+
+    movePrev = () => {
+        this.props.changeDate(addDays(this.props.currentDate, -1));
+    };
+
+    moveNext = () => {
+        this.props.changeDate(addDays(this.props.currentDate, 1));
+    };
+
     render() {
-        var date = new Date;
+
+        var currentDateEvents = this.props.calendarEvents;
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        var formattedDate = date.toLocaleDateString("en-US", options); 
+        var formattedDate = this.props.currentDate.toLocaleDateString("en-US", options); 
         
         return (
             <div>
-                <h2>{formattedDate}</h2>
+                <h2><button onClick={this.movePrev}>&lt;</button> <span>{formattedDate}</span> <button onClick={this.moveNext}>&gt;</button></h2>    
                 <div className="day">
 
                     {/*<!-- divs for the 15-minute increments -->*/}
@@ -164,9 +179,9 @@ class CalendarEvents extends React.Component {
                     <div className="htitle ht23">11pm</div>
              
                     {/* loop through state.events' keys and map that */}
-                    {Object.keys(this.props.calendarEvents).map((key) => (  
-                        <CalendarEvent key={key} id={key} selectedEvent={this.props.calendarEvents[key]} showModal={this.props.showModal} />
-                    ))}
+                    {Object.keys(currentDateEvents).map((key) => (  
+                        <CalendarEvent key={key} id={key} selectedEvent={currentDateEvents[key]} showModal={this.props.showModal} />
+                    ))};
                 
                 </div>
             </div>

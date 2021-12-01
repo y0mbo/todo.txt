@@ -14,8 +14,9 @@ const Modal = ({body, close, show, title, selectedEvent}) => {
                     </header>
                     <main className="modal_content">
                         {body}
-                        <div>{selectedEvent ? selectedEvent.location : null}</div>
+                        <div>{selectedEvent ? selectedEvent.location : null} {selectedEvent.dtstart}</div>
                         <div>{selectedEvent.contexts ? selectedEvent.contexts : null}</div>
+                        
                     </main>
                     <footer className="modal_footer">
                         {/*<button className="modalClose" onClick={close}>Cancel</button>*/}
