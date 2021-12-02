@@ -20,12 +20,14 @@ class CalendarEvents extends React.Component {
     render() {
 
         var currentDateEvents = this.props.calendarEvents;
+        var eventList = Object.keys(currentDateEvents).map((key) => currentDateEvents[key]);
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var formattedDate = this.props.currentDate.toLocaleDateString("en-US", options); 
         
         return (
+            
             <div>
-                <h2><button onClick={this.movePrev}>&lt;</button> <span>{formattedDate}</span> <button onClick={this.moveNext}>&gt;</button></h2>    
+                <h2><button onClick={this.movePrev}>&lt;</button><button onClick={this.moveNext}>&gt;</button> <span>{formattedDate}</span></h2>    
                 <div className="day">
 
                     {/*<!-- divs for the 15-minute increments -->*/}
@@ -177,12 +179,12 @@ class CalendarEvents extends React.Component {
                     <div className="htitle ht21">9pm</div>
                     <div className="htitle ht22">10pm</div>
                     <div className="htitle ht23">11pm</div>
-             
-                    {/* loop through state.events' keys and map that */}
-                    {Object.keys(currentDateEvents).map((key) => (  
-                        <CalendarEvent key={key} id={key} selectedEvent={currentDateEvents[key]} showModal={this.props.showModal} />
-                    ))};
+
+                    {eventList.filter(daEvent => (new Date(daEvent.dtstart)).toDateString() == this.props.currentDate.toDateString()).map(filteredEvent => (
+                        <CalendarEvent key={filteredEvent.key} id={filteredEvent.key} selectedEvent={filteredEvent} showModal={this.props.showModal} />
+                    ))}
                 
+             
                 </div>
             </div>
         );
