@@ -17,6 +17,10 @@ class CalendarEvents extends React.Component {
         this.props.changeDate(addDays(this.props.currentDate, 1));
     };
 
+    moveToToday = () => {
+        this.props.changeDate(new Date);
+    };
+
     render() {
 
         var currentDateEvents = this.props.calendarEvents;
@@ -27,7 +31,7 @@ class CalendarEvents extends React.Component {
         return (
             
             <div>
-                <h2><button onClick={this.movePrev}>&lt;</button><button onClick={this.moveNext}>&gt;</button> <span>{formattedDate}</span></h2>    
+                <h2><button onClick={this.moveToToday}>Today</button><button onClick={this.movePrev}>&lt;</button><button onClick={this.moveNext}>&gt;</button> <span>{formattedDate}</span></h2>    
                 <div className="day">
 
                     {/*<!-- divs for the 15-minute increments -->*/}
