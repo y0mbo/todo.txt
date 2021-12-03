@@ -21,6 +21,10 @@ class CalendarEvents extends React.Component {
         this.props.changeDate(new Date);
     };
 
+    createEvent(eventStart)  {
+        this.props.createEvent(eventStart);
+    };
+
     render() {
 
         var currentDateEvents = this.props.calendarEvents;
@@ -34,8 +38,61 @@ class CalendarEvents extends React.Component {
                 <h2><button onClick={this.moveToToday}>Today</button><button onClick={this.movePrev}>&lt;</button><button onClick={this.moveNext}>&gt;</button> <span>{formattedDate}</span></h2>    
                 <div className="day">
 
+          
+                    {/* divs for the hour increments */}
+                    <div className="hour h0000"></div>
+                    <div className="hour h0100"></div>
+                    <div className="hour h0200"></div>
+                    <div className="hour h0300"></div>
+                    <div className="hour h0400"></div>
+                    <div className="hour h0500"></div>
+                    <div className="hour h0600"></div>
+                    <div className="hour h0700"></div>
+                    <div className="hour h0800"></div>
+                    <div className="hour h0900"></div>
+                    <div className="hour h1000"></div>
+                    <div className="hour h1100"></div>
+                    <div className="hour h1200"></div>
+                    <div className="hour h1300"></div>
+                    <div className="hour h1400"></div>
+                    <div className="hour h1500"></div>
+                    <div className="hour h1600"></div>
+                    <div className="hour h1700"></div>
+                    <div className="hour h1800"></div>
+                    <div className="hour h1900"></div>
+                    <div className="hour h2000"></div>
+                    <div className="hour h2100"></div>
+                    <div className="hour h2200"></div>
+                    <div className="hour h2300"></div>
+
+                    {/* divs for the hour titles */}
+                    <div className="htitle ht00">12am</div>
+                    <div className="htitle ht01">1am</div>
+                    <div className="htitle ht02">2am</div>
+                    <div className="htitle ht03">3am</div>
+                    <div className="htitle ht04">4am</div>
+                    <div className="htitle ht05">5am</div>
+                    <div className="htitle ht06">6am</div>
+                    <div className="htitle ht07">7am</div>
+                    <div className="htitle ht08">8am</div>
+                    <div className="htitle ht09">9am</div>
+                    <div className="htitle ht10">10am</div>
+                    <div className="htitle ht11">11am</div>
+                    <div className="htitle ht12">12pm</div>
+                    <div className="htitle ht13">1pm</div>
+                    <div className="htitle ht14">2pm</div>
+                    <div className="htitle ht15">3pm</div>
+                    <div className="htitle ht16">4pm</div>
+                    <div className="htitle ht17">5pm</div>
+                    <div className="htitle ht18">6pm</div>
+                    <div className="htitle ht19">7pm</div>
+                    <div className="htitle ht20">8pm</div>
+                    <div className="htitle ht21">9pm</div>
+                    <div className="htitle ht22">10pm</div>
+                    <div className="htitle ht23">11pm</div>
+
                     {/*<!-- divs for the 15-minute increments -->*/}
-                    <div className="time t0000"></div>
+                    <div className="time t0000" onClick={() => this.createEvent("0000")}></div>
                     <div className="time t0015"></div>
                     <div className="time t0030"></div>
                     <div className="time timelast t0045"></div>
@@ -131,58 +188,6 @@ class CalendarEvents extends React.Component {
                     <div className="time t2315"></div>
                     <div className="time t2330"></div>
                     <div className="time timelast t2345"></div>
-
-                    {/* divs for the hour increments */}
-                    <div className="hour h0000"></div>
-                    <div className="hour h0100"></div>
-                    <div className="hour h0200"></div>
-                    <div className="hour h0300"></div>
-                    <div className="hour h0400"></div>
-                    <div className="hour h0500"></div>
-                    <div className="hour h0600"></div>
-                    <div className="hour h0700"></div>
-                    <div className="hour h0800"></div>
-                    <div className="hour h0900"></div>
-                    <div className="hour h1000"></div>
-                    <div className="hour h1100"></div>
-                    <div className="hour h1200"></div>
-                    <div className="hour h1300"></div>
-                    <div className="hour h1400"></div>
-                    <div className="hour h1500"></div>
-                    <div className="hour h1600"></div>
-                    <div className="hour h1700"></div>
-                    <div className="hour h1800"></div>
-                    <div className="hour h1900"></div>
-                    <div className="hour h2000"></div>
-                    <div className="hour h2100"></div>
-                    <div className="hour h2200"></div>
-                    <div className="hour h2300"></div>
-
-                    {/* divs for the hour titles */}
-                    <div className="htitle ht00">12am</div>
-                    <div className="htitle ht01">1am</div>
-                    <div className="htitle ht02">2am</div>
-                    <div className="htitle ht03">3am</div>
-                    <div className="htitle ht04">4am</div>
-                    <div className="htitle ht05">5am</div>
-                    <div className="htitle ht06">6am</div>
-                    <div className="htitle ht07">7am</div>
-                    <div className="htitle ht08">8am</div>
-                    <div className="htitle ht09">9am</div>
-                    <div className="htitle ht10">10am</div>
-                    <div className="htitle ht11">11am</div>
-                    <div className="htitle ht12">12pm</div>
-                    <div className="htitle ht13">1pm</div>
-                    <div className="htitle ht14">2pm</div>
-                    <div className="htitle ht15">3pm</div>
-                    <div className="htitle ht16">4pm</div>
-                    <div className="htitle ht17">5pm</div>
-                    <div className="htitle ht18">6pm</div>
-                    <div className="htitle ht19">7pm</div>
-                    <div className="htitle ht20">8pm</div>
-                    <div className="htitle ht21">9pm</div>
-                    <div className="htitle ht22">10pm</div>
-                    <div className="htitle ht23">11pm</div>
 
                     {eventList.filter(daEvent => (new Date(daEvent.dtstart)).toDateString() == this.props.currentDate.toDateString()).map(filteredEvent => (
                         <CalendarEvent key={filteredEvent.key} id={filteredEvent.key} selectedEvent={filteredEvent} showModal={this.props.showModal} />

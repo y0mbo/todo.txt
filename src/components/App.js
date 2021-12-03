@@ -31,8 +31,9 @@ class App extends React.Component {
 
   changeDate = (date) => {
     this.setState({ currentDate: date });
+    
     };
-
+  
   loadSampleTasks = () => {
     this.setState({ tasks: sampleTasks });
   };
@@ -132,6 +133,10 @@ class App extends React.Component {
     this.setState({openModal: true});
  };
 
+  createEvent = (startTime) => {
+    console.log("Called createEvent + " + startTime)
+  };
+
   toggle = (e) => {
     e.preventDefault();
     this.setState({openModal: !this.state.openModal});
@@ -148,7 +153,7 @@ class App extends React.Component {
             <Priorities priorities={this.state.priorities} />
           </div>
           <div className="calendar">
-            <CalendarEvents currentDate={this.state.currentDate} calendarEvents={this.state.calendarEvents} showModal={this.showModal} changeDate={this.changeDate} />
+            <CalendarEvents currentDate={this.state.currentDate} calendarEvents={this.state.calendarEvents} showModal={this.showModal} changeDate={this.changeDate} createEvent={this.createEvent} />
           </div>
         </main>
         <Modal selectedEvent={this.state.selectedEvent} show={this.state.openModal} title={"Modal"} close={this.toggle} />
