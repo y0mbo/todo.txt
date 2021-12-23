@@ -1,21 +1,24 @@
 # User Scenarios
 
-## Template
-```
-When [situation]
-I want to [motivation]
-So I can [expected outcome]
-```
+This document contains the job stories (user stories, but a little bit of a different format) for use in acceptance testing the project.
+It is currently a dumping ground for random thoughts which have not been implemented.
 
+I may move these all to Github Issues.
+
+----
 
 ## Title: Using a calendar-based todo list.
+### Story: 1
 ```
 When I have something I need to do
 I want to put it on my calender
 So I can get it done because its scheduled
 ```
+### Acceptance Criteria:
+```
+```
 
-## Title: First time
+## Story: First time
 ```
 When I open the application for the first time
 I want to understand how to use the application
@@ -29,7 +32,7 @@ I want to see today's calendar
 So I can work with today's obligations
 ```
 
-### Scenarios
+### Acceptance Criteria
 ```
 Given I have logged in
 When I go to the home page
@@ -133,30 +136,26 @@ Given an open task,
   And the priority must be followed by a space.
 ```
 
----
 
-# Template
-
-## Title: <What this user story is about>
-
-```
-When      [event]
-I want to [motivation]
-So I can  [outcome]
-``` 
-
-### Scenario: <What should happen>
+----
+## Template
+### Story {id}: {title}
 
 ```
-Given <some context>,
- When <some action is done>,
- Then <such outcomes are expected to occur>.
+Priority: {priority} | Estimate: {estimate}
+
+When      {event}
+I want to {motivation}
+So I can  {outcome}
 ```
-### Other stuff
-
-* Task list on the left. Calendar on the right.
-
-
+### Acceptance Criteria:
+```
+ID: {story id}-{criteria id}
+Given {some context}
+When  {some action is done}
+Then  {such outcomes are expected}
+```
+----
 
 ### Notes
 
