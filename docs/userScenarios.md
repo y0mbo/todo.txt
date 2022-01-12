@@ -5,6 +5,24 @@ It is currently a dumping ground for random thoughts which have not been impleme
 
 I may move these all to Github Issues.
 
+### Story 1: Default to today
+
+```
+When I open the application
+I want the application to default to today
+So I can work with today's obligations
+```
+### Acceptance Criteria 1-1
+```
+Given today is 2021-10-04
+When the dashboard is opened
+Then the date displayed on the calendar is Monday, 4 October 2021
+```
+----
+
+
+
+
 ----
 
 ## Title: Using a calendar-based todo list.
@@ -17,7 +35,6 @@ So I can get it done because its scheduled
 ### Acceptance Criteria:
 ```
 ```
-
 ## Story: First time
 ```
 When I open the application for the first time
@@ -151,6 +168,7 @@ So I can  {outcome}
 ### Acceptance Criteria:
 ```
 ID: {story id}-{criteria id}
+
 Given {some context}
 When  {some action is done}
 Then  {such outcomes are expected}
