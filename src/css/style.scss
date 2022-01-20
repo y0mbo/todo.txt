@@ -247,8 +247,19 @@ body {
     font-size: 1rem; 
     font-weight: 800;
   }
-  .location { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
-  .context, .project { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
+
+  .location { 
+    font-size: .8rem; 
+    margin-bottom: .1rem; 
+    margin-top: .1rem; 
+    padding-top: 0.05px;
+  }
+  .context, .project { 
+    font-size: .8rem; 
+    margin-bottom: .1rem; 
+    margin-top: .1rem; 
+    padding-top: 0.05px;
+  }
 }
 
 .duration1 {
@@ -313,7 +324,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba($grayscale-600, .35);
+  background-color: rgba($grayscale-700, .35);
 
   display: flex;
   justify-content: center;
@@ -325,7 +336,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 1rem 0 rgba($grayscale-900, 0.2);
     height: auto;
-    padding: 0 1rem;
+    padding:  1rem;
     width: 30vw;
 
     &_header {
@@ -339,10 +350,14 @@ body {
         position: absolute;
         top: 0;
         right: 0;
+      }
+
+      .close, .edit, .delete, .markDone, .copyNext, .copyTomorrow {
         background: transparent;
         border: none;
 
         img {
+          color: green;
           width: 1rem;
           height: auto;
           transition: all 0.3s;
