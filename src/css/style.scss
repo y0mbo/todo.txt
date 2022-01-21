@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Oxanium&amp;display=swap);
+
 // Grayscale Design palette: https://grayscale.design/app?lums=92.72,85.96,73.80,58.76,39.22,24.42,15.15,11.44,6.93,4.69&palettes=%23000000&filters=0%7C0&names=&labels=
 
 $grayscale-50: rgb(247, 247, 247);
@@ -26,7 +28,7 @@ $work-event: $grayscale-400;
 body {
   background: $colorx;
   color: $color-900;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Baloo Chettan 2', Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -357,7 +359,6 @@ body {
         border: none;
 
         img {
-          color: green;
           width: 1rem;
           height: auto;
           transition: all 0.3s;
