@@ -29,6 +29,7 @@ body {
   background: $colorx;
   color: $color-900;
   font-family: 'Baloo Chettan 2', Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 .container {
@@ -50,6 +51,8 @@ body {
   grid-auto-rows: 1.2rem;
   gap: 0px 0px;
   grid-auto-flow: row;
+  overflow: auto;
+  height: 80vh; /* todo: make this size correctly */
 }
 
 .htitle {
