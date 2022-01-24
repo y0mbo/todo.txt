@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Oxanium&amp;display=swap);
+
 // Grayscale Design palette: https://grayscale.design/app?lums=92.72,85.96,73.80,58.76,39.22,24.42,15.15,11.44,6.93,4.69&palettes=%23000000&filters=0%7C0&names=&labels=
 
 $grayscale-50: rgb(247, 247, 247);
@@ -26,7 +28,7 @@ $work-event: $grayscale-400;
 body {
   background: $colorx;
   color: $color-900;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Baloo Chettan 2', Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -247,8 +249,19 @@ body {
     font-size: 1rem; 
     font-weight: 800;
   }
-  .location { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
-  .context, .project { margin-top: .1rem; margin-bottom: .1rem; font-size: .8rem; padding-top: 0.05px;}
+
+  .location { 
+    font-size: .8rem; 
+    margin-bottom: .1rem; 
+    margin-top: .1rem; 
+    padding-top: 0.05px;
+  }
+  .context, .project { 
+    font-size: .8rem; 
+    margin-bottom: .1rem; 
+    margin-top: .1rem; 
+    padding-top: 0.05px;
+  }
 }
 
 .duration1 {
@@ -305,6 +318,26 @@ body {
 .event.work {background-color: $work-event;}
 
 
+/* Date navigation buttons. Appear at the top of the calendar next to the date */
+.dateNav {
+  padding-right: 1rem;
+
+  button {
+    border: none;
+    color: $grayscale-400;
+    font-family: 'Baloo Chettan 2', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-top: 0;
+  }
+  button:hover {
+    background-color: $grayscale-300;
+    color: $grayscale-100;
+    border-radius: 8px;
+  }
+}
+
+
 
 /* modal */
 .modalContainer {
@@ -313,7 +346,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba($grayscale-600, .35);
+  background-color: rgba($grayscale-700, .35);
 
   display: flex;
   justify-content: center;
@@ -325,7 +358,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 1rem 0 rgba($grayscale-900, 0.2);
     height: auto;
-    padding: 0 1rem;
+    padding:  1rem;
     width: 30vw;
 
     &_header {
@@ -339,6 +372,9 @@ body {
         position: absolute;
         top: 0;
         right: 0;
+      }
+
+      .close, .edit, .delete, .markDone, .copyNext, .copyTomorrow {
         background: transparent;
         border: none;
 
