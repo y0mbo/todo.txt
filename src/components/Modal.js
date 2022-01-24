@@ -15,12 +15,12 @@ const Modal = ({body, close, show, title, selectedEvent}) => {
             <div className="modalContainer">    
                 <div className="modal">
                     <header className="modal_header">
-                        <button className="edit" onClick={close}><img src={xeditImage} alt="edit" /></button>
-                        <button className="delete"><img src={deleteImage} alt="delete" /></button>
-                        <button className="markDone"><img src={markDoneImage} alt="mark done" /></button>
-                        <button className="copyNext"><img src={copyNextImage} alt="copy next" /></button>
-                        <button className="copyTomorrow"><img src={copyTomorrowImage} alt="copy tomorrow" /></button>
-                        <button className="close" onClick={close}><img src={xClose} alt="close" /></button>
+                        <button className="edit" onClick={close} title="Edit"><img src={xeditImage} alt="edit" /></button>
+                        <button className="delete" title="Delete"><img src={deleteImage} alt="delete" /></button>
+                        <button className="markDone" title="Mark Completed"><img src={markDoneImage} alt="mark done" /></button>
+                        <button className="copyNext" title="Copy to Next"><img src={copyNextImage} alt="copy next" /></button>
+                        <button className="copyTomorrow" title="Copy to Tomorrow"><img src={copyTomorrowImage} alt="copy tomorrow" /></button>
+                        <button className="close" onClick={close} title="Close"><img src={xClose} alt="close" /></button>
                         <h2>{selectedEvent ? selectedEvent.summary : title}</h2>
                     </header>
                     <main className="modal_content">
