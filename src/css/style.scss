@@ -237,6 +237,7 @@ body {
 .event {
   background-color: $event-context;  
   border-radius: 8px;
+  cursor: pointer;
   padding-left: 1rem;
   padding-right: 1rem;  
   padding-top: .5rem;
