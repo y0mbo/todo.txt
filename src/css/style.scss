@@ -1,6 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Oxanium&amp;display=swap);
 
-// Grayscale Design palette: https://grayscale.design/app?lums=92.72,85.96,73.80,58.76,39.22,24.42,15.15,11.44,6.93,4.69&palettes=%23000000&filters=0%7C0&names=&labels=
+
+/* https://coolors.co/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1 */
+$red-salsa: #f94144ff;
+$orange-red: #f3722cff;
+$yellow-orange-color-wheel: #f8961eff;
+$mango-tango: #f9844aff;
+$maize-crayola: #f9c74fff;
+$pistachio: #90be6dff;
+$zomp: #43aa8bff;
+$cadet-blue: #4d908eff;
+$queen-blue: #577590ff;
+$cg-blue: #277da1ff;
+
+// Grayscale Design palette: https://grayscale.design/app?lums=92.72,85.96,73.80,58.76,39.22,24.42,15.15,11.44,6.93,4.69&palettes=%23b49ee8,%23277da1,%234d908e,%2343aa8b,%23f9c74f,%23f3722c,%23f94144,%23000000&filters=0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0&names=purp,blue,bluegreen,green,maize,orange,red,grayscale&labels=,,,,,,,
 
 $grayscale-50: rgb(247, 247, 247);
 $grayscale-100: rgb(239, 239, 239);
@@ -13,6 +26,84 @@ $grayscale-700: rgb(95, 95, 95);
 $grayscale-800: rgb(74, 74, 74);
 $grayscale-900: rgb(61, 61, 61);
 
+$purple-50: rgb(248, 246, 253);
+$purple-100: rgb(241, 237, 251);
+$purple-200: rgb(227, 219, 246);
+$purple-300: rgb(209, 195, 241);
+$purple-400: rgb(179, 156, 232);
+$purple-500: rgb(149, 117, 222);
+$purple-600: rgb(122, 83, 214);
+$purple-700: rgb(108, 64, 210);
+$purple-800: rgb(84, 43, 181);
+$purple-900: rgb(69, 35, 148);
+
+$blue-50: rgb(240, 248, 251);
+$blue-100: rgb(226, 241, 248);
+$blue-200: rgb(198, 228, 241);
+$blue-300: rgb(157, 209, 231);
+$blue-400: rgb(91, 178, 215);
+$blue-500: rgb(45, 145, 188);
+$blue-600: rgb(36, 116, 150);
+$blue-700: rgb(32, 102, 132);
+$blue-800: rgb(25, 80, 103);
+$blue-900: rgb(21, 66, 85);
+
+$bluegreen-50: rgb(242, 248, 248);
+$bluegreen-100: rgb(229, 241, 241);
+$bluegreen-200: rgb(204, 228, 227);
+$bluegreen-300: rgb(169, 209, 208);
+$bluegreen-400: rgb(115, 180, 178);
+$bluegreen-500: rgb(79, 147, 145);
+$bluegreen-600: rgb(63, 118, 116);
+$bluegreen-700: rgb(55, 103, 101);
+$bluegreen-800: rgb(43, 81, 80);
+$bluegreen-900: rgb(35, 66, 65);
+
+$green-50: rgb(239, 249, 246);
+$green-100: rgb(224, 243, 237);
+$green-200: rgb(194, 231, 220);
+$green-300: rgb(151, 214, 195);
+$green-400: rgb(80, 186, 154);
+$green-500: rgb(59, 151, 123);
+$green-600: rgb(48, 121, 99);
+$green-700: rgb(42, 106, 87);
+$green-800: rgb(33, 83, 68);
+$green-900: rgb(27, 68, 56);
+
+$maize-50: rgb(254, 246, 227);
+$maize-100: rgb(253, 237, 199);
+$maize-200: rgb(251, 220, 147);
+$maize-300: rgb(248, 193, 63);
+$maize-400: rgb(220, 156, 8);
+$maize-500: rgb(178, 126, 6);
+$maize-600: rgb(142, 101, 5);
+$maize-700: rgb(125, 89, 4);
+$maize-800: rgb(98, 70, 3);
+$maize-900: rgb(81, 57, 3);
+
+$orange-50: rgb(254, 245, 240);
+$orange-100: rgb(253, 236, 226);
+$orange-200: rgb(252, 216, 197);
+$orange-300: rgb(249, 189, 156);
+$orange-400: rgb(245, 141, 85);
+$orange-500: rgb(231, 89, 13);
+$orange-600: rgb(187, 72, 11);
+$orange-700: rgb(163, 63, 9);
+$orange-800: rgb(128, 50, 7);
+$orange-900: rgb(106, 41, 6);
+
+$red-50: rgb(255, 245, 245);
+$red-100: rgb(254, 235, 235);
+$red-200: rgb(254, 214, 215);
+$red-300: rgb(253, 185, 186);
+$red-400: rgb(251, 133, 135);
+$red-500: rgb(249, 64, 67);
+$red-600: rgb(219, 7, 10);
+$red-700: rgb(193, 6, 9);
+$red-800: rgb(153, 5, 7);
+$red-900: rgb(128, 4, 6);
+
+
 $colorx: $grayscale-100;
 $color-900: $grayscale-900;
 
@@ -20,10 +111,12 @@ $context: $grayscale-200;
 $event-context: $grayscale-300;
 
 /* standard contexts */
-$personal-context: $grayscale-200;
-$personal-event: $grayscale-300;
-$work-context: $grayscale-200;
-$work-event: $grayscale-300;
+$personal-context: $blue-200;
+$personal-event: $blue-300;
+$spiritual-context: $purple-200;
+$spiritual-event: $purple-300;
+$work-context: $bluegreen-200;
+$work-event: $bluegreen-300;
 
 body {
   background: $colorx;
@@ -273,13 +366,13 @@ body {
 .duration1 {
   padding-top: 0;
   padding-bottom: 0; 
-  .context { display: none;}
+  .context, .project { display: none;}
   .title { font-size: .75rem;}
 }
 .duration2 {
   padding-top: 0;
   padding-bottom: 0;
-  .context { display: none;}
+  .context, .project { display: none;}
  }
 
 .duration3 {
@@ -319,9 +412,11 @@ body {
 
 
 .personal {background-color: $personal-context;}
-.event.personal {background-color: $personal-event;}
+.event.personal {background-color: $personal-event; color: $blue-900;}
+.spiritual {background-color: $spiritual-context;}
+.event.spiritual {background-color: $spiritual-event; color: $purple-900;}
 .work {background-color: $work-context;}
-.event.work {background-color: $work-event;}
+.event.work {background-color: $orange-300; color: $orange-900;}
 
 
 /* Date navigation buttons. Appear at the top of the calendar next to the date */

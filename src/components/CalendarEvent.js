@@ -41,7 +41,7 @@ class CalendarEvent extends React.Component {
         return (
             <div onClick={this.handleClick} className={'event duration' + duration + ' ' + contextClasses + ' ' + projectClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
                 <div className="title">{summary}</div>
-                <div className="location">{location}</div>
+                <div className="project">{projects}</div>
                 <div className="context">{contexts}</div>   
             </div>
         )
