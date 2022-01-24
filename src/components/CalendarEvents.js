@@ -35,7 +35,13 @@ class CalendarEvents extends React.Component {
         return (
             
             <div>
-                <h2><button onClick={this.moveToToday}>Today</button><button onClick={this.movePrev}>&lt;</button><button onClick={this.moveNext}>&gt;</button> <span>{formattedDate}</span></h2>    
+                <h2>
+                    <span class="dateNav">
+                        <button className="todayNav" onClick={this.moveToToday} title="Go to Today">Today</button>
+                        <button className="previousNav" onClick={this.movePrev} title="Previous day">&lt;</button>
+                        <button className="nextNav" onClick={this.moveNext} title="Next day">&gt;</button>
+                    </span> 
+                    <span>{formattedDate}</span></h2>    
                 <div className="day">
 
           

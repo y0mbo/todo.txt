@@ -318,6 +318,26 @@ body {
 .event.work {background-color: $work-event;}
 
 
+/* Date navigation buttons. Appear at the top of the calendar next to the date */
+.dateNav {
+  padding-right: 1rem;
+
+  button {
+    border: none;
+    color: $grayscale-400;
+    font-family: 'Baloo Chettan 2', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-top: 0;
+  }
+  button:hover {
+    background-color: $grayscale-300;
+    color: $grayscale-100;
+    border-radius: 8px;
+  }
+}
+
+
 
 /* modal */
 .modalContainer {
