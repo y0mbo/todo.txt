@@ -17,13 +17,13 @@ $colorx: $grayscale-100;
 $color-900: $grayscale-900;
 
 $context: $grayscale-200;
-$event-context: $grayscale-400;
+$event-context: $grayscale-300;
 
 /* standard contexts */
 $personal-context: $grayscale-200;
-$personal-event: $grayscale-400;
+$personal-event: $grayscale-300;
 $work-context: $grayscale-200;
-$work-event: $grayscale-400;
+$work-event: $grayscale-300;
 
 body {
   background: $colorx;
@@ -247,6 +247,8 @@ body {
   padding-bottom: .5rem;      
   margin-left: .5rem;
   margin-right: .5rem;
+  margin-bottom: 2px;
+  margin-top: 1px;
   overflow: clip;
 
   .title {
