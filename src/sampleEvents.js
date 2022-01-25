@@ -23,7 +23,7 @@ const sampleEvents = {
     },
     event3: {
         duid: "3",
-        summary: "Lunch",
+        summary: "Lunch, no +project",
         description: "Naf Naf grill for lunch.",
         dtstart: "2021-10-04T12:00:00",
         dtend: "2021-10-04T12:45:00",
@@ -33,13 +33,13 @@ const sampleEvents = {
     },
     event4: {
         duid: "4",
-        summary: "15 minute thing",
+        summary: "15 minute thing with no @contexts",
         description: "Sort thing ",
         dtstart: "2021-10-04T14:00:00",
         dtend: "2021-10-04T14:15:00",
         location: "At work",
         projects: "+someProject +anotherProject",
-        contexts: "@work",
+        contexts: "",
     },
     event5: {
         duid: "5",
@@ -94,13 +94,13 @@ const sampleEvents = {
     },
     event10: {
         duid: "10",
-        summary: "Get Ready",
+        summary: "Get Ready, multiple @contexts",
         description: "Get ready for work.",
         dtstart: "2021-10-04T07:15:00", 
         dtend: "2021-10-04T08:00:00",
         location: "home",
         projects: "",
-        contexts: "@personal",
+        contexts: "@personal @work",
     },
     event11: {
         duid: "11",
