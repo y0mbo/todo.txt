@@ -411,6 +411,9 @@ body {
 .work {color: $orange-900;}
 .event.work {background-color: $orange-300; color: $orange-900;}
 
+/* testing project styling]*/
+.someProject, .meeting {color: $purple-900;}
+.anotherProject, .project {color: $red-900;}
 
 /* Date navigation buttons. Appear at the top of the calendar next to the date */
 .dateNav {
