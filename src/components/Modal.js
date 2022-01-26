@@ -6,6 +6,7 @@ import deleteImage from "../img/trash.svg"
 import markDoneImage from "../img/checkbox.svg"
 import copyNextImage from "../img/copy.svg"
 import copyTomorrowImage from "../img/arrow-right.svg"
+import DisplayList from "./DisplayList";
 
 const Modal = ({body, close, show, title, selectedEvent}) => {
 
@@ -27,8 +28,17 @@ const Modal = ({body, close, show, title, selectedEvent}) => {
                         {body}
                         <div>{selectedEvent ? format(new Date(selectedEvent.dtstart), "MMM d, yyyy") : null} </div>
                         <div>{selectedEvent ? format(new Date(selectedEvent.dtstart), "h:mm bbb") : null} - {format(new Date(selectedEvent.dtend), "h:mm bbb")}</div>
-                        <div>Projects: {selectedEvent.projects ? selectedEvent.projects : null}</div>
-                        <div>Contexts: {selectedEvent.contexts ? selectedEvent.contexts : null}</div>
+
+                        <div class="inline">
+                            {selectedEvent.projects ? "Projects: "  : null}
+                            <DisplayList list={selectedEvent.projects} className="projects" />
+                        </div>
+
+                        <div class="inline">
+                            {selectedEvent.contexts ? "Contexts: "  : null}
+                            <DisplayList list={selectedEvent.contexts} className="contexts" />
+                        </div>
+                        
                     </main>
                     <footer className="modal_footer">
                         {/*<button className="modalClose" onClick={close}>Cancel</button>*/}
