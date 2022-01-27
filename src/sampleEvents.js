@@ -124,7 +124,7 @@ const sampleEvents = {
     },
     event13: {
         duid: "13",
-        summary: "Requirements document",
+        summary: "New Project requirements document",
         description: "Create the requirements document for the new project.",
         dtstart: "2021-10-04T09:30:00", 
         dtend: "2021-10-04T10:00:00",
