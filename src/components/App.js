@@ -151,6 +151,15 @@ class App extends React.Component {
             <Projects projects={this.state.projects} />
             <Contexts contexts={this.state.contexts} />
             <Priorities priorities={this.state.priorities} />
+            <h2>Dailies</h2> {/* todo, of course */}
+            <ul>
+              <li>Wake Up</li>
+              <li>Devotions</li>
+              <li>Get Ready</li>
+              <li>Lunch</li>
+              <li>Bedtime</li>
+            </ul>
+            
           </div>
           <div className="calendar">
             <CalendarEvents currentDate={this.state.currentDate} calendarEvents={this.state.calendarEvents} showModal={this.showModal} changeDate={this.changeDate} createEvent={this.createEvent} />
