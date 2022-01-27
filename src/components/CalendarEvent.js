@@ -39,7 +39,7 @@ class CalendarEvent extends React.Component {
         let projectClasses = projects.replace(/\+/g, '');
         
         return (
-            <div onClick={this.handleClick} className={'event duration' + duration + ' ' + contextClasses + ' ' + projectClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
+            <div onClick={this.handleClick} className={'event duration' + duration + ' ' + projectClasses +' ' + contextClasses} id={totallyADuid} style={{gridArea: eventGridArea}}>
                 <div className="title">{summary}</div>
                 <div className="project">{projects}</div>
                 <div className="context">{contexts}</div>   
