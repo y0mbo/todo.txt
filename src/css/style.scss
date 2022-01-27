@@ -399,10 +399,12 @@ body {
 .priorityV {color: $grayscale-600;}
 .priorityW {color: $grayscale-600;}
 .priorityX {color: $grayscale-600;}
-.priorityY {color: $grayscale-600;}
+.priorityY {color: $grayscale-600;} 
 .priorityZ {color: $grayscale-600;}
 
-
+/* todo: these need to be specified differently */
+/* right now with no context but a colored project set, the text in the event grid appears in the color of the last project in the list. */
+/* without a context it should be in the grayscale range */
 .context.personal {color: $blue-700;}
 .personal {color: $blue-900;}
 .event.personal {background-color: $blue-300; color: $blue-900;}
