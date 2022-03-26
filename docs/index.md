@@ -1,10 +1,12 @@
-# Todo.txt implementation
+# Duet implementation
 
 This is the documentation for y0mbo's todo.txt (codename: Duet).
 
 ## Research
 
 (Meet the user)
+
+*Note: I am intentionally skipping this section as I am the user.*
 
 - User Demographics
 - User Goals
@@ -47,8 +49,8 @@ This is the documentation for y0mbo's todo.txt (codename: Duet).
 - [001 - Use the todo.txt file format](adr/001-UseTodoTxtFormat.md)
 - [002 - Use iCalendar](adr/002-UseiCalendar.md)
 
-
 ## Uncategorized Feature List
+
 - Double click an item to edit.
 - Alt+Up increases the priority for all selected items.
 - Alt+Down decreases the priority for all selected items.
@@ -66,10 +68,43 @@ This is the documentation for y0mbo's todo.txt (codename: Duet).
 - AI that figures out that you always have an event at a given time (e.g. commute) and will ghost block it into the schedule at that time. Create official tracked event by clicking on the ghost.
 * Add automation for different systems to create a daily journal entry for notes to go with the day's tasks.
 
+## --
+
+
+```
+item123: {
+    id: 123,
+    summary: "I am the very model of a modern major general",
+    description: "More details can go here, but they aren't considered part of the raw data and can only be added in Duet.",
+    location: "Also a duet-only field; only for an event.",
+    duedate: "2022-02-12",
+    contexts: "@context1 @context2",
+    projects: "+projectA +projectB",
+    createdDate: "2022-02-11"
+    startDate: "2022-02-12T15:00",
+    endDate: "2022-02-12T15:30",
+    completedDate: "",
+    priority: "A",
+    raw: "(A) 2022-02-11 I am the very model of a modern major general +projectA +projectB @context1 @context2 due:2022-02-12 duet:123",
+    type: "event",
+    parentId: 122,
+}
+```
+1. Create a task. Assign it a due date, and it will appear in the bin on the day it's due.
+2. Drag a task to the calendar, and it will turn into an event to work on. That event can be marked as complete, which marks the corresponding taksk complete.
+3. Book an event by highlighting a blok of time and entering the details.
+4. For a given event, click "need more time" to duplicate that event in the next open block on the calendar. If the original event is tied to a task, this event will also.
+5. Allow export of events as a .ics file.
+6. Allow export of tasks as a todo.txt file.
+
+
+
+
+
+
 
 ## Reference
 * [A History of iCalendar](https://devguide.calconnect.org/iCalendar-Topics/History/)
-
 
 
 ## iCalendar format 
