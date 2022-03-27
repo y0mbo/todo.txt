@@ -29,12 +29,12 @@ const Modal = ({body, close, show, title, selectedEvent}) => {
                         <div>{selectedEvent ? format(new Date(selectedEvent.dtstart), "MMM d, yyyy") : null} </div>
                         <div>{selectedEvent ? format(new Date(selectedEvent.dtstart), "h:mm bbb") : null} - {format(new Date(selectedEvent.dtend), "h:mm bbb")}</div>
 
-                        <div class="inline">
+                        <div className="inline">
                             {selectedEvent.projects ? "Projects: "  : null}
                             <DisplayList list={selectedEvent.projects} className="projects" />
                         </div>
 
-                        <div class="inline">
+                        <div className="inline">
                             {selectedEvent.contexts ? "Contexts: "  : null}
                             <DisplayList list={selectedEvent.contexts} className="contexts" />
                         </div>
