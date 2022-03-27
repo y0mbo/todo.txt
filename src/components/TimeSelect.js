@@ -5,6 +5,7 @@ const TimeSelect = ({selecetedTime, disableBeforeTime}) => {
     return (
         <> {
             <select>
+                <option></option>
                 <option>12:00am</option>
                 <option>12:15am</option>
                 <option>12:30am</option>
