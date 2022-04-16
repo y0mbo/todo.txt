@@ -14,7 +14,7 @@ class Projects extends React.Component {
           {Object.keys(this.props.projects).map((key) => (
           <div className="tag" key={key}>
           <a>
-            {key} <span className="tagCount">{this.props.projects[key]}</span>
+            <span className={`${key.replace(/@|\+/g, '')}`}>{key}</span> <span className="tagCount">{this.props.projects[key]}</span>
           </a>
         </div>
 
