@@ -6,8 +6,6 @@
    viewBox="0 0 51.534998 43.957142"
    version="1.1"
    id="svg5"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    >
 
@@ -26,6 +24,6 @@
        style="fill:none;stroke:#206684;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 72.670132,15.651035 79.722595,25.463821 106.59214,3.8365767"
        id="path1554"
-       sodipodi:nodetypes="ccc" />
+       />
   </g>
 </svg>
