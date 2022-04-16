@@ -23,15 +23,18 @@ const sampleTasks = {
     createDate: "2021-03-12",
     description: "Task with @context",
     raw: "2021-03-12 Task with @context tid:3",
+    dueDate: "2021-03-13",
   },
   task4: {
     tid: 4,
+
     contexts: "@context",
     createDate: "2021-03-12",
     projects: "+banana",
     description: "Task with a @context inside the sentence +banana split.",
-    raw:
-      "2021-03-12 Task with a @context inside the sentence +banana split. tid:a",
+    raw: "2021-03-12 Task with a @context inside the sentence +banana split. tid:a",
+    status: "completed",
+    completedDate: "2021-03-13",
   },
   task5: {
     tid: 5,
@@ -40,6 +43,7 @@ const sampleTasks = {
     dueDate: "2021-03-12",
     projects: "+newProject",
     description: "New Project requirements document",
+    priority: "A",
     raw:
       "2021-03-12 Requirements document @work +newProject tid:5",
   },
