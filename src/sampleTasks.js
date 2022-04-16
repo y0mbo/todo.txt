@@ -19,7 +19,7 @@ const sampleTasks = {
   },
   task3: {
     tid: 3,
-    contexts: "@context",
+    contexts: "@spiritual",
     createDate: "2021-03-12",
     description: "Task with @context",
     raw: "2021-03-12 Task with @context tid:3",
@@ -27,8 +27,7 @@ const sampleTasks = {
   },
   task4: {
     tid: 4,
-
-    contexts: "@context",
+    contexts: "@personal",
     createDate: "2021-03-12",
     projects: "+banana",
     description: "Task with a @context inside the sentence +banana split.",

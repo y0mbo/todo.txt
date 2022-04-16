@@ -18,14 +18,15 @@ class Tasks extends React.Component {
   render() {
     return (
       <div>
-        <h2>The bin</h2>
+        <h2>{this.props.title}
+        <span className="taskCount">({Object.keys(this.props.tasks).length} tasks)</span>
+        </h2>
         <TaskList>
           {/* loop through state.tasks' keys and map that. */}
           {Object.keys(this.props.tasks).map((key) => (
-            <Task key={key} id={key} details={this.props.tasks[key]} />
+            <Task key={key} id={key} task={this.props.tasks[key]} updateTask={this.props.updateTask} />
           ))}
         </TaskList>
-        <span>{Object.keys(this.props.tasks).length} tasks</span>
       </div>
     );
   }
