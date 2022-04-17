@@ -29,7 +29,7 @@ const sampleTasks = {
     tid: 4,
     contexts: "@personal",
     createDate: "2021-03-12",
-    projects: "+banana",
+    projects: "+meeting",
     description: "Task with a @context inside the sentence +banana split.",
     raw: "2021-03-12 Task with a @context inside the sentence +banana split. tid:a",
     status: "completed",
