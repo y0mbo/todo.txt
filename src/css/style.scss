@@ -113,10 +113,12 @@ $event-context: $grayscale-300;
 body {
   background: $colorx;
   color: $color-900;
-  font-family: 'Baloo Chettan 2', Arial, Helvetica, sans-serif;
   overflow: hidden;
 }
 
+body, input, select, textarea {
+  font-family: 'Baloo Chettan 2', Arial, Helvetica, sans-serif;
+}
 .container {
   display: grid; 
   grid-template-columns: 0.6fr 1.4fr; 
@@ -127,7 +129,16 @@ body {
     "tasklist calendar"
     "tasklist calendar"; 
 }
-.tasklist { grid-area: tasklist; }
+.tasklist { 
+  grid-area: tasklist; 
+  padding-right: 1rem;
+
+  h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: .5rem 0px 0;
+  }
+}
 .calendar { grid-area: calendar; }
 
 .day {
@@ -374,9 +385,9 @@ body {
   .context { display: block;}
 }
 
-.priority { font-size: .75rem; font-weight: bold;}
-.priorityA {color: $grayscale-600;}
-.priorityB {color: $grayscale-600;}
+.priority { font-size: .75rem; font-weight: 800;}
+.priorityA {color: $orange-600;}
+.priorityB {color: $purple-600;}
 .priorityC {color: $grayscale-600;}
 .priorityD {color: $grayscale-600;}
 .priorityE {color: $grayscale-600;}
@@ -399,10 +410,19 @@ body {
 .priorityV {color: $grayscale-600;}
 .priorityW {color: $grayscale-600;}
 .priorityX {color: $grayscale-600;}
-.priorityY {color: $grayscale-600;}
+.priorityY {color: $grayscale-600;} 
 .priorityZ {color: $grayscale-600;}
 
+.completed {
+  .priority { 
+    color: $grayscale-300;
+    font-weight: 300;
+  }
+}
 
+/* todo: these need to be specified differently */
+/* right now with no context but a colored project set, the text in the event grid appears in the color of the last project in the list. */
+/* without a context it should be in the grayscale range */
 .context.personal {color: $blue-700;}
 .personal {color: $blue-900;}
 .event.personal {background-color: $blue-300; color: $blue-900;}
@@ -527,3 +547,94 @@ body {
   }
 }
 /* end modal */
+
+/* forms */
+form div {
+  margin-bottom: .5rem;
+  display: flex;
+}
+label {
+  margin-right: 1rem;
+}
+input, select, textarea {
+  border: 1px solid $grayscale-300;
+  border-radius: 4px;
+  flex-grow: 100;
+}
+textarea.fullWidth {
+  width: 100%;
+}
+
+.headerInput {
+  font-size: 1.5em;
+  width: 100%;
+}
+form button {  
+  border: none;
+  color: $grayscale-400;
+  font-family: 'Baloo Chettan 2', Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-top: 0;
+}
+
+.taskComplete {
+  position: relative;
+  width: 20px;
+
+  .imageMain, .imageHover, .imageDone {
+    position: absolute;
+    left: 0;
+    top: 4px;
+  }
+
+  .imageHover, .imageDone {
+    opacity: 0;
+    transition: opacity .2s;
+  }
+
+}
+.taskComplete:hover {
+  .imageHover {
+    opacity: 1;
+  }
+}
+.taskContent {
+  margin-left: 20px;
+}
+
+.completed {
+  color: $grayscale-300;
+  text-decoration: line-through;
+
+  .taskComplete {
+    .imageMain, .imageHover {
+      opacity: 0;
+    }
+    .imageDone {
+      opacity: 1;
+    }
+    .taskComplete:hover {
+      .imageMain {
+        opacity: 1;
+        transition: opacity .2s;
+      }
+      .imageDone {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.taskCount {
+  font-size: .8rem;
+  font-weight: 400;
+  margin-left: 8px;
+  
+} 
+
+/* Debug */
+img:not([alt]) {
+  border: 5px solid red;
+  filter: blur(5px);
+}

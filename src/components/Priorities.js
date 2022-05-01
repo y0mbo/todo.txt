@@ -13,7 +13,7 @@ class Priorities extends React.Component {
           {Object.keys(this.props.priorities).map((key) => (
              <div className="tag" key={key}>
              <a>
-               ({key}) <span className="tagCount">{this.props.priorities[key]}</span>
+             {key && <span className={'priority' + key}>({key}) </span>} <span className="tagCount">{this.props.priorities[key]}</span>
              </a>
            </div>
           ))}

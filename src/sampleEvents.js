@@ -2,7 +2,7 @@
 
 const sampleEvents = {
     event1: {
-        duid: "1",
+        duid: 1,
         summary: "This is an event",
         description: "I am the very model of a modern major general. __________________________________________________________________________",
         dtstart: "2021-10-04T22:30:00",
@@ -12,7 +12,7 @@ const sampleEvents = {
         contexts: "@context @home",
     },
     event2: {
-        duid: "2",
+        duid: 2,
         summary: "A second event.",
         description: "I am the very model of a modern major general.",
         dtstart: "2021-10-04T10:00:00",
@@ -22,7 +22,7 @@ const sampleEvents = {
         contexts: "@work",
     },
     event3: {
-        duid: "3",
+        duid: 3,
         summary: "Lunch, no +project",
         description: "Naf Naf grill for lunch.",
         dtstart: "2021-10-04T12:00:00",
@@ -32,7 +32,7 @@ const sampleEvents = {
         contexts: "@personal",
     },
     event4: {
-        duid: "4",
+        duid: 4,
         summary: "15 minute thing with no @contexts",
         description: "Sort thing ",
         dtstart: "2021-10-04T14:00:00",
@@ -42,7 +42,7 @@ const sampleEvents = {
         contexts: "",
     },
     event5: {
-        duid: "5",
+        duid: 5,
         summary: "A 30 minute event",
         description: "I am the very model of a modern major general.",
         dtstart: "2021-10-04T14:30:00",
@@ -52,7 +52,7 @@ const sampleEvents = {
         contexts: "@work",
     },
     event6: {
-        duid: "6",
+        duid: 6,
         summary: "This is really early",
         description: "This is an event at 1am so I don't have to scroll.",
         dtstart: "2021-10-04T01:30:00", 
@@ -62,7 +62,7 @@ const sampleEvents = {
         contexts: "@home",
     },
     event7: {
-        duid: "7",
+        duid: 7,
         summary: "Something",
         description: "This is an event at 1am so I don't have to scroll.",
         dtstart: "2021-10-04T15:00:00", 
@@ -73,7 +73,7 @@ const sampleEvents = {
     },
 
     event8: {
-        duid: "8",
+        duid: 8,
         summary: "Wake up",
         description: "Wake up and make coffee.",
         dtstart: "2021-10-04T06:30:00", 
@@ -83,7 +83,7 @@ const sampleEvents = {
         contexts: "@personal",
     },
     event9: {
-        duid: "9",
+        duid: 9,
         summary: "Devotions",
         description: "Time in the morning for devotions.",
         dtstart: "2021-10-04T06:45:00", 
@@ -93,7 +93,7 @@ const sampleEvents = {
         contexts: "@spiritual",
     },
     event10: {
-        duid: "10",
+        duid: 10,
         summary: "Get Ready, multiple @contexts",
         description: "Get ready for work.",
         dtstart: "2021-10-04T07:15:00", 
@@ -103,7 +103,7 @@ const sampleEvents = {
         contexts: "@personal @work",
     },
     event11: {
-        duid: "11",
+        duid: 11,
         summary: "Status call on Sales Project",
         description: "Status call +meeting @work",
         dtstart: "2021-10-04T08:00:00", 
@@ -113,7 +113,7 @@ const sampleEvents = {
         contexts: "@work",
     },
     event12: {
-        duid: "12",
+        duid: 12,
         summary: "Responding to email",
         description: "Responding to email",
         dtstart: "2021-10-04T09:00:00", 
@@ -123,8 +123,8 @@ const sampleEvents = {
         contexts: "@work",
     },
     event13: {
-        duid: "13",
-        summary: "Requirements document",
+        duid: 13,
+        summary: "New Project requirements document",
         description: "Create the requirements document for the new project.",
         dtstart: "2021-10-04T09:30:00", 
         dtend: "2021-10-04T10:00:00",

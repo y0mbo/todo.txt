@@ -2,7 +2,7 @@
 
 const sampleTasks = {
   task1: {
-    tid: "1",
+    tid: 1,
     priority: "A",
     createDate: "2021-03-12",
     projects: "+banana",
@@ -10,7 +10,7 @@ const sampleTasks = {
     raw: "(A) 2021-03-12 Create sample data. +banana tid:1",
   },
   task2: {
-    tid: "2",
+    tid: 2,
     priority: "B",
     createDate: "2021-03-12",
     projects: "+project",
@@ -18,20 +18,33 @@ const sampleTasks = {
     raw: "(B) 2021-03-12 Another task with a +project tid:2",
   },
   task3: {
-    tid: "3",
-    contexts: "@context",
+    tid: 3,
+    contexts: "@spiritual",
     createDate: "2021-03-12",
     description: "Task with @context",
     raw: "2021-03-12 Task with @context tid:3",
+    dueDate: "2021-03-13",
   },
   task4: {
-    tid: "a",
-    contexts: "@context",
+    tid: 4,
+    contexts: "@personal",
     createDate: "2021-03-12",
-    projects: "+banana",
+    projects: "+meeting",
     description: "Task with a @context inside the sentence +banana split.",
+    raw: "2021-03-12 Task with a @context inside the sentence +banana split. tid:a",
+    status: "completed",
+    completedDate: "2021-03-13",
+  },
+  task5: {
+    tid: 5,
+    contexts: "@work",
+    createDate: "2021-03-12",
+    dueDate: "2021-03-12",
+    projects: "+newProject",
+    description: "New Project requirements document",
+    priority: "A",
     raw:
-      "2021-03-12 Task with a @context inside the sentence +banana split. tid:a",
+      "2021-03-12 Requirements document @work +newProject tid:5",
   },
 };
 

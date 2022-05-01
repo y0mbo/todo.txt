@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+   width="51.534996mm"
+   height="43.957142mm"
+   viewBox="0 0 51.534998 43.957142"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   >
+
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="translate(-58.057142,1.5)">
+    <circle
+       style="fill:none;stroke:#6d6d6d;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path846"
+       cx="80.035713"
+       cy="20.478571"
+       r="19.478571" />
+    <path
+       style="fill:none;stroke:#206684;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 72.670132,15.651035 79.722595,25.463821 106.59214,3.8365767"
+       id="path1554"
+       />
+  </g>
+</svg>

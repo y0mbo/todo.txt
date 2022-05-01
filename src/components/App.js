@@ -1,10 +1,11 @@
 import React, { isValidElement, useState } from "react";
 
+import AddCalendarEvent from "./AddCalendarEvent";
+import CalendarEvents from "./CalendarEvents";
 import Contexts from "./Contexts";
+import Modal from "./Modal";
 import Priorities from "./Priorities";
 import Projects from "./Projects";
-import CalendarEvents from "./CalendarEvents";
-import Modal from "./Modal";
 import Tasks from "./Tasks";
 
 import sampleEvents from "../sampleEvents";
@@ -21,6 +22,7 @@ class App extends React.Component {
     projects: {},
     selectedEvent: {},
     tasks: {},
+    openAddEvent: false,
     openModal: false,
     setModal: false,
   };
@@ -29,9 +31,9 @@ class App extends React.Component {
     this.loadSite();
   };
 
+  /* todo: Does this need to be here? */
   changeDate = (date) => {
     this.setState({ currentDate: date });
-    
     };
   
   loadSampleTasks = () => {
@@ -127,14 +129,28 @@ class App extends React.Component {
     this.setState({currentDate: new Date(2021,9,4)});  
   };
 
+  addEvent = (event) => {
+    console.log("add event in app.js ---> " + event.summary);
+    
+    const calendarEvents = { ...this.state.calendarEvents };
+    calendarEvents[event.id] = event;
+    this.setState({ calendarEvents });
+  };
+
+  updateTask = (key, updatedTask) => {
+    const tasks = { ...this.state.tasks };
+    tasks[key] = updatedTask;
+    this.setState({ tasks });
+  };
+
   showModal = (currentEvent) => {
     console.log(currentEvent);
     this.setState({selectedEvent: currentEvent});
     this.setState({openModal: true});
  };
 
-  createEvent = (startTime) => {
-    console.log("Called createEvent + " + startTime)
+  createEvent = (startDateTime) => {
+    this.setState({openAddEvent: true});
   };
 
   toggle = (e) => {
@@ -142,21 +158,37 @@ class App extends React.Component {
     this.setState({openModal: !this.state.openModal});
   };
 
+  closeAddEvent = (e) => {
+    e.preventDefault();
+    this.setState({openAddEvent: !this.state.openAddEvent});
+  };
+
   render() {
     return (
       <div className="app">
         <main className="container">
           <div className="tasklist">
-            <Tasks tasks={this.state.tasks} />
+            <Tasks tasks={this.state.tasks} updateTask={this.updateTask} title={"Due Today"} />
+            <Tasks tasks={this.state.tasks} updateTask={this.updateTask} title={"The Bin"} />
             <Projects projects={this.state.projects} />
             <Contexts contexts={this.state.contexts} />
             <Priorities priorities={this.state.priorities} />
+            {/* <h2>Dailies</h2> todo, of course 
+            <ul>
+              <li>Wake Up</li>
+              <li>Devotions</li>
+              <li>Get Ready</li>
+              <li>Lunch</li>
+              <li>Bedtime</li>
+            </ul>
+            */}
           </div>
           <div className="calendar">
             <CalendarEvents currentDate={this.state.currentDate} calendarEvents={this.state.calendarEvents} showModal={this.showModal} changeDate={this.changeDate} createEvent={this.createEvent} />
           </div>
         </main>
         <Modal selectedEvent={this.state.selectedEvent} show={this.state.openModal} title={"Modal"} close={this.toggle} />
+        <AddCalendarEvent show={this.state.openAddEvent} close={this.closeAddEvent} addEvent={this.addEvent} />
       </div>
     );
   }

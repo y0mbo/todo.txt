@@ -14,7 +14,7 @@ class Contexts extends React.Component {
           {Object.keys(this.props.contexts).map((key) => (
             <div className="tag" key={key}>
               <a>
-                {key} <span className="tagCount">{this.props.contexts[key]}</span>
+                <span className={`${key.replace(/@|\+/g, '')}`}>{key}</span> <span className="tagCount">{this.props.contexts[key]}</span>
               </a>
             </div>
           ))}

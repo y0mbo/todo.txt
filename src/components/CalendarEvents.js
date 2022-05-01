@@ -21,8 +21,13 @@ class CalendarEvents extends React.Component {
         this.props.changeDate(new Date);
     };
 
-    createEvent(eventStart)  {
-        this.props.createEvent(eventStart);
+    createEvent = (startDateTime, duration) => {
+        this.props.createEvent(startDateTime);
+    };
+
+    addEvent = () => {
+        console.log("CalendarEvent newEvent");
+        this.props.addEvent();
     };
 
     render() {
@@ -36,14 +41,17 @@ class CalendarEvents extends React.Component {
             
             <div>
                 <h2>
-                    <span class="dateNav">
+                    <span className="dateNav">
                         <button className="todayNav" onClick={this.moveToToday} title="Go to Today">Today</button>
                         <button className="previousNav" onClick={this.movePrev} title="Previous day">&lt;</button>
                         <button className="nextNav" onClick={this.moveNext} title="Next day">&gt;</button>
                     </span> 
-                    <span>{formattedDate}</span></h2>    
+                    <span>{formattedDate}</span>   
+                    <span className="temp">
+                        <button className="addEvent t1316" onClick={() => {this.createEvent(this.props.currentDate, 30);}}>+</button>
+                    </span>
+                </h2> 
                 <div className="day">
-
           
                     {/* divs for the hour increments */}
                     <div className="hour h0000"></div>
@@ -98,7 +106,7 @@ class CalendarEvents extends React.Component {
                     <div className="htitle ht23">11pm</div>
 
                     {/*<!-- divs for the 15-minute increments -->*/}
-                    <div className="time t0000" onClick={() => this.createEvent("0000")}></div>
+                    <div className="time t0000"></div>
                     <div className="time t0015"></div>
                     <div className="time t0030"></div>
                     <div className="time timelast t0045"></div>
@@ -196,9 +204,8 @@ class CalendarEvents extends React.Component {
                     <div className="time timelast t2345"></div>
 
                     {eventList.filter(daEvent => (new Date(daEvent.dtstart)).toDateString() == this.props.currentDate.toDateString()).map(filteredEvent => (
-                        <CalendarEvent key={filteredEvent.key} id={filteredEvent.key} selectedEvent={filteredEvent} showModal={this.props.showModal} />
+                        <CalendarEvent key={filteredEvent.duid} id={filteredEvent.key} selectedEvent={filteredEvent} showModal={this.props.showModal} />
                     ))}
-                
              
                 </div>
             </div>

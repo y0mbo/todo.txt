@@ -1,5 +1,7 @@
 # todo.txt
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f26b746a-04c8-40e4-8b89-0f88c92a4e5b/deploy-status)](https://app.netlify.com/sites/suspicious-turing-c1d429/deploys)
+
 An implementation of Gina T's todo.txt format. This project is currently using the codename "Duet".
 
 I read somewhere that every developer eventually creates a todo app. I guess it's my turn.
